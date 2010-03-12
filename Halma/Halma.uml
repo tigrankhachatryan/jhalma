@@ -142,7 +142,7 @@
         <eAnnotations xmi:id="_N_SXgC34Ed-iKMk_NfN40Q" source="MetamodelAssociation"/>
         <ownedEnd xmi:id="_PgrRwC34Ed-iKMk_NfN40Q" name="" type="_IA1V8C1REd-k69JKaRyf0w" association="_N_RwcC34Ed-iKMk_NfN40Q">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pgsf4C34Ed-iKMk_NfN40Q" value="60"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pgr40C34Ed-iKMk_NfN40Q" value="60"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pgr40C34Ed-iKMk_NfN40Q" value="20"/>
         </ownedEnd>
         <ownedEnd xmi:id="_PgtG8C34Ed-iKMk_NfN40Q" name="" type="_DUQ5IC1REd-k69JKaRyf0w" association="_N_RwcC34Ed-iKMk_NfN40Q">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PguVEC34Ed-iKMk_NfN40Q" value="1"/>
