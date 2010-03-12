@@ -4,6 +4,22 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Activity" xmi:id="_lIeoAC31Ed-s7rKEtKQhHA" name="Activity"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kXjnwC39Ed-Eo-g4hiOoXQ" name="">
+    <packagedElement xmi:type="uml:Activity" xmi:id="_l6WQMC39Ed-Eo-g4hiOoXQ" name="Activity"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_HlzeMC3-Ed-Eo-g4hiOoXQ" name="" memberEnd="_L3YoIC3-Ed-Eo-g4hiOoXQ _L3iZIC3-Ed-Eo-g4hiOoXQ _PjH6EC3-Ed-Eo-g4hiOoXQ _PjH6ES3-Ed-Eo-g4hiOoXQ" navigableOwnedEnd="_L3YoIC3-Ed-Eo-g4hiOoXQ _L3iZIC3-Ed-Eo-g4hiOoXQ _PjH6EC3-Ed-Eo-g4hiOoXQ _PjH6ES3-Ed-Eo-g4hiOoXQ">
+      <eAnnotations xmi:id="_HlzeMS3-Ed-Eo-g4hiOoXQ" source="MetamodelAssociation"/>
+      <ownedEnd xmi:id="_L3YoIC3-Ed-Eo-g4hiOoXQ" name="Spielbrett" association="_HlzeMC3-Ed-Eo-g4hiOoXQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L3YoIi3-Ed-Eo-g4hiOoXQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L3YoIS3-Ed-Eo-g4hiOoXQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_L3iZIC3-Ed-Eo-g4hiOoXQ" name="Spieler" association="_HlzeMC3-Ed-Eo-g4hiOoXQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L3iZIi3-Ed-Eo-g4hiOoXQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L3iZIS3-Ed-Eo-g4hiOoXQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_PjH6EC3-Ed-Eo-g4hiOoXQ" name="Sender" association="_HlzeMC3-Ed-Eo-g4hiOoXQ"/>
+      <ownedEnd xmi:id="_PjH6ES3-Ed-Eo-g4hiOoXQ" name="Empf&#xe4;nger" association="_HlzeMC3-Ed-Eo-g4hiOoXQ"/>
+    </packagedElement>
+  </packagedElement>
   <profileApplication xmi:id="_bnxG1i31Ed-s7rKEtKQhHA">
     <eAnnotations xmi:id="_boNysC31Ed-s7rKEtKQhHA" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Deployment.profile.uml#_gPzkoXlkEdyC2_BXA89-Eg"/>
@@ -90,8 +106,8 @@
   </profileApplication>
   <profileApplication xmi:id="_bop3kC31Ed-s7rKEtKQhHA">
     <eAnnotations xmi:id="_bop3kS31Ed-s7rKEtKQhHA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
     </eAnnotations>
-    <appliedProfile href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/Standard.profile.uml#_0"/>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
   </profileApplication>
 </uml:Model>
