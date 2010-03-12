@@ -8,7 +8,8 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_wSkrgC09Ed-k69JKaRyf0w" name="">
       <eAnnotations xmi:id="_Bp_qUC0-Ed-k69JKaRyf0w" source="Halma/Planung/PlanungDeploymentDiagram.udd"/>
       <eAnnotations xmi:id="_gejRwC1AEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad" references="_geiqsC1AEd-k69JKaRyf0w _vh_bwC1AEd-k69JKaRyf0w _9b5x4C1AEd-k69JKaRyf0w _D29JwC1BEd-k69JKaRyf0w _L5h5EC1BEd-k69JKaRyf0w _ehocoC1BEd-k69JKaRyf0w _g4PusC1BEd-k69JKaRyf0w _jF55EC1BEd-k69JKaRyf0w _lbvIAC1BEd-k69JKaRyf0w _IoGvIC1CEd-k69JKaRyf0w _KEGzEC1CEd-k69JKaRyf0w _Oz-bgC1CEd-k69JKaRyf0w _SkmNcC1CEd-k69JKaRyf0w _W69wwC1CEd-k69JKaRyf0w"/>
-      <eAnnotations xmi:id="_DUSHQC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd" references="_DUQ5IC1REd-k69JKaRyf0w _IA1V8C1REd-k69JKaRyf0w _K3k5kC1REd-k69JKaRyf0w _Q9Av4C3XEd-eJdnOmt6K0w"/>
+      <eAnnotations xmi:id="_DUSHQC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd" references="_DUQ5IC1REd-k69JKaRyf0w _IA1V8C1REd-k69JKaRyf0w _K3k5kC1REd-k69JKaRyf0w"/>
+      <eAnnotations xmi:id="_09Lk8C33Ed-iKMk_NfN40Q" source="Halma/Analyse/GrobeStruktur.ucd" references="_K3k5kC1REd-k69JKaRyf0w _DUQ5IC1REd-k69JKaRyf0w _IA1V8C1REd-k69JKaRyf0w"/>
       <packagedElement xmi:type="uml:Collaboration" xmi:id="_MDOdEC1AEd-k69JKaRyf0w" name="collaboration1">
         <ownedBehavior xmi:type="uml:Interaction" xmi:id="_MES0EC1AEd-k69JKaRyf0w" name="Interaction1">
           <lifeline xmi:id="_PPT-kC1AEd-k69JKaRyf0w" represents="_PPVMsC1AEd-k69JKaRyf0w"/>
@@ -105,15 +106,15 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_DUQ5IC1REd-k69JKaRyf0w" name="Spielbrett">
         <eAnnotations xmi:id="_DUSHQS1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+        <eAnnotations xmi:id="_1Qs94C33Ed-iKMk_NfN40Q" source="Halma/Analyse/GrobeStruktur.ucd"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_IA1V8C1REd-k69JKaRyf0w" name="Spielstein" clientDependency="_ZR5sUC3ZEd-eJdnOmt6K0w">
         <eAnnotations xmi:id="_IA2kEC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+        <eAnnotations xmi:id="_1Q5LIC33Ed-iKMk_NfN40Q" source="Halma/Analyse/GrobeStruktur.ucd"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_K3k5kC1REd-k69JKaRyf0w" name="Spieler" clientDependency="_mlo8EC1REd-k69JKaRyf0w">
         <eAnnotations xmi:id="_K3mHsC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Q9Av4C3XEd-eJdnOmt6K0w" name="Instanz" clientDependency="_fOu3IC3ZEd-eJdnOmt6K0w">
-        <eAnnotations xmi:id="_Q9Kg4C3XEd-eJdnOmt6K0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+        <eAnnotations xmi:id="_1QeUYC33Ed-iKMk_NfN40Q" source="Halma/Analyse/GrobeStruktur.ucd"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_wpdTgC3XEd-eJdnOmt6K0w" name="" memberEnd="_gzIekC3YEd-eJdnOmt6K0w _gzLh4C3YEd-eJdnOmt6K0w" navigableOwnedEnd="_gzIekC3YEd-eJdnOmt6K0w _gzLh4C3YEd-eJdnOmt6K0w">
         <eAnnotations xmi:id="_wpehoC3XEd-eJdnOmt6K0w" source="MetamodelAssociation"/>
@@ -124,6 +125,28 @@
         <ownedEnd xmi:id="_gzLh4C3YEd-eJdnOmt6K0w" name="owner" type="_K3k5kC1REd-k69JKaRyf0w" association="_wpdTgC3XEd-eJdnOmt6K0w">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gzNXEC3YEd-eJdnOmt6K0w" value="1"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gzMI8C3YEd-eJdnOmt6K0w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_6g_y0C33Ed-iKMk_NfN40Q" name="" memberEnd="_AMvNoC34Ed-iKMk_NfN40Q _AM0tMC34Ed-iKMk_NfN40Q" navigableOwnedEnd="_AMvNoC34Ed-iKMk_NfN40Q _AM0tMC34Ed-iKMk_NfN40Q">
+        <eAnnotations xmi:id="_6hF5cC33Ed-iKMk_NfN40Q" source="MetamodelAssociation"/>
+        <ownedEnd xmi:id="_AMvNoC34Ed-iKMk_NfN40Q" name="owner" type="_K3k5kC1REd-k69JKaRyf0w" association="_6g_y0C33Ed-iKMk_NfN40Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AMzfEC34Ed-iKMk_NfN40Q" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AMxp4C34Ed-iKMk_NfN40Q" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_AM0tMC34Ed-iKMk_NfN40Q" name="property" type="_IA1V8C1REd-k69JKaRyf0w" association="_6g_y0C33Ed-iKMk_NfN40Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AM17UC34Ed-iKMk_NfN40Q" value="10"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AM1UQC34Ed-iKMk_NfN40Q" value="10"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_N_RwcC34Ed-iKMk_NfN40Q" name="" memberEnd="_PgrRwC34Ed-iKMk_NfN40Q _PgtG8C34Ed-iKMk_NfN40Q" navigableOwnedEnd="_PgrRwC34Ed-iKMk_NfN40Q _PgtG8C34Ed-iKMk_NfN40Q">
+        <eAnnotations xmi:id="_N_SXgC34Ed-iKMk_NfN40Q" source="MetamodelAssociation"/>
+        <ownedEnd xmi:id="_PgrRwC34Ed-iKMk_NfN40Q" name="" type="_IA1V8C1REd-k69JKaRyf0w" association="_N_RwcC34Ed-iKMk_NfN40Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pgsf4C34Ed-iKMk_NfN40Q" value="60"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pgr40C34Ed-iKMk_NfN40Q" value="60"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_PgtG8C34Ed-iKMk_NfN40Q" name="" type="_DUQ5IC1REd-k69JKaRyf0w" association="_N_RwcC34Ed-iKMk_NfN40Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PguVEC34Ed-iKMk_NfN40Q" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PgtuAC34Ed-iKMk_NfN40Q" value="1"/>
         </ownedEnd>
       </packagedElement>
     </packagedElement>
@@ -137,7 +160,6 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_ZR5sUC3ZEd-eJdnOmt6K0w" name="" supplier="_DUQ5IC1REd-k69JKaRyf0w" client="_IA1V8C1REd-k69JKaRyf0w"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_fOu3IC3ZEd-eJdnOmt6K0w" name="" supplier="_K3k5kC1REd-k69JKaRyf0w" client="_Q9Av4C3XEd-eJdnOmt6K0w"/>
     <profileApplication xmi:id="_wBh-0C09Ed-k69JKaRyf0w">
       <eAnnotations xmi:id="_wBmQQC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/UML2.profile.uml#_f9NXwJIyEd2ymsRPCrfQAQ"/>

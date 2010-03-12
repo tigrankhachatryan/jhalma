@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="GrobeStruktur" metadata="uml2-1.0" initialized="true" scrolledY="78" tag="10" key="32303037303632392048616C6D61">
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1" name="Spielbrett" location="322,19" size="169,175" timstampe="12" stereotype="" runTimeClassModel="">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="GrobeStruktur" id="{UMLID=_wSkrgC09Ed-k69JKaRyf0w,JavaID=}" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303632392048616C6D61">
+  <children xsi:type="editmodel:ClassEditModel" name="Spieler" location="59,168" size="86,47" timstampe="17" stereotype="" id="{UMLID=_K3k5kC1REd-k69JKaRyf0w,JavaID=/Spieler}" runTimeClassModel="">
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <children xsi:type="editmodel:CompartmentEditModel"/>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
-  </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Spielstein" location="39,14" size="169,180" timstampe="14" stereotype="" runTimeClassModel="">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.1" label="//@children.1/@sourceConnections.0/@children.2" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="+ property" location="84,180" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.0/@children.0/@children.0" roleLabel="//@children.1/@sourceConnections.0/@children.0/@children.1" navigable="true" flags="1">
-        <children xsi:type="editmodel:LabelEditModel" name="10" location="104,201" size="12,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="+ + property" foregroundRGB="96,96,96" location="130,201" size="59,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_6g_y0C33Ed-iKMk_NfN40Q}" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="owner" location="42,0" id="{UMLID=_AMvNoC34Ed-iKMk_NfN40Q}" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.1" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="88,147" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="+ owner" foregroundRGB="96,96,96" location="108,147" size="41,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="owner" location="87,0" multiplicityLabel="//@children.1/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.1/@sourceConnections.0/@children.1/@children.1" navigable="true" flags="1">
-        <children xsi:type="editmodel:LabelEditModel" name="1" location="110,245" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="+ owner" foregroundRGB="96,96,96" location="130,245" size="41,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="property" location="51,47" id="{UMLID=_AM0tMC34Ed-iKMk_NfN40Q}" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="10..10" location="64,104" size="30,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="+ property" foregroundRGB="96,96,96" location="108,104" size="50,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
     </sourceConnections>
-    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" autoLocated="true" id="{UMLID=}" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.1/@children.1" label="//@children.1/@sourceConnections.1/@children.2" sourceEnd="//@children.1/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="Spielstein" location="169,92" id="{UMLID=}" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.1/@children.0/@children.0" roleLabel="//@children.1/@sourceConnections.1/@children.0/@children.1" navigable="true" flags="1">
-        <children xsi:type="editmodel:LabelEditModel" name="20..60" location="215,113" size="30,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="Spielstein" foregroundRGB="96,96,96" location="215,85" size="46,14" fontInfo="Arial-8-0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="Spielbrett" location="252,50" size="102,47" timstampe="13" stereotype="" id="{UMLID=_DUQ5IC1REd-k69JKaRyf0w,JavaID=/Spielbrett}" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="Spielstein" location="50,50" size="103,47" timstampe="15" stereotype="" id="{UMLID=_IA1V8C1REd-k69JKaRyf0w,JavaID=/Spielstein}" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_N_RwcC34Ed-iKMk_NfN40Q}" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.0/@children.1" label="//@children.2/@sourceConnections.0/@children.2" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="103,23" id="{UMLID=_PgrRwC34Ed-iKMk_NfN40Q}" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.0/@children.0" roleLabel="//@children.2/@sourceConnections.0/@children.0/@children.1" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="60..60" location="154,56" size="30,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="-33.0" distanceFromWire="9.99999999999999" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="+ " foregroundRGB="255,255,255" location="154,50" size="9,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="-44.0" distanceFromWire="16.0" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="Spielbrett" location="0,87" id="{UMLID=}" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" roleLabel="//@children.1/@sourceConnections.1/@children.1/@children.1" navigable="true" flags="1">
-        <children xsi:type="editmodel:LabelEditModel" name="1" location="309,113" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="Spielbrett" foregroundRGB="96,96,96" location="270,85" size="45,14" fontInfo="Arial-8-0"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,23" id="{UMLID=_PgtG8C34Ed-iKMk_NfN40Q}" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="238,56" size="6,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="39.0" distanceFromWire="10.0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="+ " foregroundRGB="255,255,255" location="224,50" size="9,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="26.0" distanceFromWire="15.999999999999996" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
     </sourceConnections>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
-  </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="Spieler" location="36,266" size="176,189" timstampe="16" stereotype="" runTimeClassModel="">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
-  </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Instanz" location="336,259" size="169,203" timstampe="11" stereotype="" runTimeClassModel="">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="350,84" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="504,252" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>
