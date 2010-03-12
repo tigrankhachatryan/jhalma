@@ -1,0 +1,78 @@
+Lastenheft nach IEEE 830
+
+Name des Softwareprodukts: Halma
+
+Name des Herstellers: Lars & Simon
+
+Versionsdatum der Software: 1.0
+
+1. Einleitung
+	
+	1. Zweck
+		Die Entwicklung des Softwareprodukts soll zur Vorbereitung
+		auf eine Klausur dienen.
+	
+	2. Umfang
+		//
+
+	3. Verweise auf sonstige Ressourcen oder Quellen
+		//
+
+	4. Erläuterungen zu Begriffen und / oder Abkürzungen
+		//
+
+	5. Übersicht
+		//
+
+2. Allgemeine Beschreibung
+
+	1. Produktperspektive
+		Das Softwareprodukt muss nicht mit vergleichbaren Produkten mithalten können.
+	
+	2. Produktfunktionen
+		Das Softwareprodukt soll das Spiel Halma simulieren.
+
+	3. Benutzermerkmale
+		//
+
+	4. Einschränkungen
+		//
+
+	5. Annahmen und Abhängigkeiten
+		In späteren Versionen soll es möglich sein einen Spieler durch einen Computer zu ersetzen.
+
+3. Spezifische Anforderungen
+
+	1. funktionale Anforderungen
+		Der Benutzer soll die Anzahl der Spieler auswählen können. (2,3,4 oder 6 Spieler)
+		Die Benutzer sollen ihre Namen eingeben können.
+		Die Benutzer sollen ihre Züge mittels Tastatur und/oder Maus ausführen können.
+		Das Programm soll den Benutzern signalisieren, wenn ein Zug ungültig ist.
+		Das Programm soll anzeigen welcher Spieler an der Reihe ist.
+		Das Programm soll die Anzahl der Züge des Gewinners mitzählen und am Ende die Möglich-
+		keit bieten diese Anzahl in einem Ranking eintragen zu lassen.
+
+	2. nicht-funktionale Anforderungen
+		Das Programm soll das Halma-Spiel in Farbe, in 2D und von oben darstellen.
+
+	3. externe Schnittstellen
+		Als externe Schnittstelle soll die Tastatur und/oder Maus dienen.
+
+	4. Design Constraints
+		Die Kosten für das Softwareprojekt sollen sich maximal auf 100€ belaufen.
+		Das Projekt soll spätestens am 31.03.10 abgeschlossen werden.
+
+	5. Anforderungen an Performance
+		//
+
+	6. Qualitätsanforderungen
+		//
+
+	7. Sonstige Anforderungen
+		//
+
+mögliche Interessenkonflikte, also unterschiedliche Ziele seitens der Nutzer: //
+
+unklare oder sogar unbekannte technische Rahmenbedingungen: //
+
+sich ändernde Anforderungen oder Prioritäten schon während des Entwurfsprozesses: //	

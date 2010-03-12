@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Meta="http:///schemas/Meta/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Meta/1 platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw">
+  <uml:Model xmi:id="_vtJqQS09Ed-k69JKaRyf0w" name="Halma">
+    <eAnnotations xmi:id="_uew9kC3XEd-eJdnOmt6K0w" source="General" references="_uevvcC3XEd-eJdnOmt6K0w"/>
+    <packageImport xmi:id="_v4McoC09Ed-k69JKaRyf0w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wSkrgC09Ed-k69JKaRyf0w" name="">
+      <eAnnotations xmi:id="_Bp_qUC0-Ed-k69JKaRyf0w" source="Halma/Planung/PlanungDeploymentDiagram.udd"/>
+      <eAnnotations xmi:id="_gejRwC1AEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad" references="_geiqsC1AEd-k69JKaRyf0w _vh_bwC1AEd-k69JKaRyf0w _9b5x4C1AEd-k69JKaRyf0w _D29JwC1BEd-k69JKaRyf0w _L5h5EC1BEd-k69JKaRyf0w _ehocoC1BEd-k69JKaRyf0w _g4PusC1BEd-k69JKaRyf0w _jF55EC1BEd-k69JKaRyf0w _lbvIAC1BEd-k69JKaRyf0w _IoGvIC1CEd-k69JKaRyf0w _KEGzEC1CEd-k69JKaRyf0w _Oz-bgC1CEd-k69JKaRyf0w _SkmNcC1CEd-k69JKaRyf0w _W69wwC1CEd-k69JKaRyf0w"/>
+      <eAnnotations xmi:id="_DUSHQC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd" references="_DUQ5IC1REd-k69JKaRyf0w _IA1V8C1REd-k69JKaRyf0w _K3k5kC1REd-k69JKaRyf0w _Q9Av4C3XEd-eJdnOmt6K0w"/>
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_MDOdEC1AEd-k69JKaRyf0w" name="collaboration1">
+        <ownedBehavior xmi:type="uml:Interaction" xmi:id="_MES0EC1AEd-k69JKaRyf0w" name="Interaction1">
+          <lifeline xmi:id="_PPT-kC1AEd-k69JKaRyf0w" represents="_PPVMsC1AEd-k69JKaRyf0w"/>
+        </ownedBehavior>
+        <ownedAttribute xmi:id="_PPVMsC1AEd-k69JKaRyf0w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_dNo6oC1AEd-k69JKaRyf0w" name="Activity">
+        <node xmi:type="uml:OpaqueAction" xmi:id="_geiqsC1AEd-k69JKaRyf0w" name="Anforderungen erheben" outgoing="_zDrZ0C1AEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_gej40C1AEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_vh_bwC1AEd-k69JKaRyf0w" name="Softwaresystem entwerfen" outgoing="_B6A78C1BEd-k69JKaRyf0w" incoming="_zDrZ0C1AEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_viAC0C1AEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_9b5x4C1AEd-k69JKaRyf0w" name="Softwaresystem implementieren" outgoing="_PlbjEC1BEd-k69JKaRyf0w" incoming="_B6A78C1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_9b7AAC1AEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_D29JwC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_D2-X4C1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_L5h5EC1BEd-k69JKaRyf0w" name="Softwaresystem testen" outgoing="_qdnGcC1BEd-k69JKaRyf0w" incoming="_PlbjEC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_L5igIC1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_ehocoC1BEd-k69JKaRyf0w" name="Anforderungen erheben" outgoing="_xb5uQC1BEd-k69JKaRyf0w" incoming="_qdnGcC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_ehpDsC1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_g4PusC1BEd-k69JKaRyf0w" name="Softwaresystem entwerfen" outgoing="_ycJDQC1BEd-k69JKaRyf0w" incoming="_xb5uQC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_g4QVwC1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_jF55EC1BEd-k69JKaRyf0w" name="Softwaresystem implementieren" outgoing="_zE9WwC1BEd-k69JKaRyf0w" incoming="_ycJDQC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_jF6gIC1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_lbvIAC1BEd-k69JKaRyf0w" name="Softwaresystem testen" outgoing="_YlGXUC1CEd-k69JKaRyf0w" incoming="_zE9WwC1BEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_lbvvEC1BEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_IoGvIC1CEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_IoHWMC1CEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_KEGzEC1CEd-k69JKaRyf0w" name="Anforderungen erheben" outgoing="_ZMUIUC1CEd-k69JKaRyf0w" incoming="_YlGXUC1CEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_KEHaIC1CEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_Oz-bgC1CEd-k69JKaRyf0w" name="Softwaresystem entwerfen" outgoing="_ZrEg4C1CEd-k69JKaRyf0w" incoming="_ZMUIUC1CEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_Oz_CkC1CEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_SkmNcC1CEd-k69JKaRyf0w" name="Softwaresystem implementieren" outgoing="_aJapwC1CEd-k69JKaRyf0w" incoming="_ZrEg4C1CEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_Skm0gC1CEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_W69wwC1CEd-k69JKaRyf0w" name="Softwaresystem testen" incoming="_aJapwC1CEd-k69JKaRyf0w">
+          <eAnnotations xmi:id="_W6-X0C1CEd-k69JKaRyf0w" source="Halma/Planung/Vorgehensmodell.uad"/>
+        </node>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_zDrZ0C1AEd-k69JKaRyf0w" name="" source="_geiqsC1AEd-k69JKaRyf0w" target="_vh_bwC1AEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_0nYBMC1AEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_0nYoQC1AEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_B6A78C1BEd-k69JKaRyf0w" name="" source="_vh_bwC1AEd-k69JKaRyf0w" target="_9b5x4C1AEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_CDgPIC1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_CDg2MC1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_PlbjEC1BEd-k69JKaRyf0w" name="" source="_9b5x4C1AEd-k69JKaRyf0w" target="_L5h5EC1BEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_PukQ8C1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_Puk4AC1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_qdnGcC1BEd-k69JKaRyf0w" name="" source="_L5h5EC1BEd-k69JKaRyf0w" target="_ehocoC1BEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_qr0hkC1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_qr1IoC1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_xb5uQC1BEd-k69JKaRyf0w" name="" source="_ehocoC1BEd-k69JKaRyf0w" target="_g4PusC1BEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_xpuu4C1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_xpvV8C1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_ycJDQC1BEd-k69JKaRyf0w" name="" source="_g4PusC1BEd-k69JKaRyf0w" target="_jF55EC1BEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_ynNq0C1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_ynOR4C1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_zE9WwC1BEd-k69JKaRyf0w" name="" source="_jF55EC1BEd-k69JKaRyf0w" target="_lbvIAC1BEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_zPAqoC1BEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_zPBRsC1BEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_YlGXUC1CEd-k69JKaRyf0w" name="" source="_lbvIAC1BEd-k69JKaRyf0w" target="_KEGzEC1CEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_YxBTcC1CEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_YxB6gC1CEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_ZMUIUC1CEd-k69JKaRyf0w" name="" source="_KEGzEC1CEd-k69JKaRyf0w" target="_Oz-bgC1CEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_ZWPgYC1CEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_ZWQHcC1CEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_ZrEg4C1CEd-k69JKaRyf0w" name="" source="_Oz-bgC1CEd-k69JKaRyf0w" target="_SkmNcC1CEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_Zz9XIC1CEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_Zz9-MC1CEd-k69JKaRyf0w" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_aJapwC1CEd-k69JKaRyf0w" name="" source="_SkmNcC1CEd-k69JKaRyf0w" target="_W69wwC1CEd-k69JKaRyf0w">
+          <guard xmi:type="uml:OpaqueExpression" xmi:id="_aVA1wC1CEd-k69JKaRyf0w" name=""/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_aVBc0C1CEd-k69JKaRyf0w" value="1"/>
+        </edge>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DUQ5IC1REd-k69JKaRyf0w" name="Spielbrett">
+        <eAnnotations xmi:id="_DUSHQS1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IA1V8C1REd-k69JKaRyf0w" name="Spielstein" clientDependency="_ZR5sUC3ZEd-eJdnOmt6K0w">
+        <eAnnotations xmi:id="_IA2kEC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_K3k5kC1REd-k69JKaRyf0w" name="Spieler" clientDependency="_mlo8EC1REd-k69JKaRyf0w">
+        <eAnnotations xmi:id="_K3mHsC1REd-k69JKaRyf0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Q9Av4C3XEd-eJdnOmt6K0w" name="Instanz" clientDependency="_fOu3IC3ZEd-eJdnOmt6K0w">
+        <eAnnotations xmi:id="_Q9Kg4C3XEd-eJdnOmt6K0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_wpdTgC3XEd-eJdnOmt6K0w" name="" memberEnd="_gzIekC3YEd-eJdnOmt6K0w _gzLh4C3YEd-eJdnOmt6K0w" navigableOwnedEnd="_gzIekC3YEd-eJdnOmt6K0w _gzLh4C3YEd-eJdnOmt6K0w">
+        <eAnnotations xmi:id="_wpehoC3XEd-eJdnOmt6K0w" source="MetamodelAssociation"/>
+        <ownedEnd xmi:id="_gzIekC3YEd-eJdnOmt6K0w" name="property" type="_IA1V8C1REd-k69JKaRyf0w" association="_wpdTgC3XEd-eJdnOmt6K0w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gzKTwC3YEd-eJdnOmt6K0w" value="15"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gzJssC3YEd-eJdnOmt6K0w" value="10"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_gzLh4C3YEd-eJdnOmt6K0w" name="owner" type="_K3k5kC1REd-k69JKaRyf0w" association="_wpdTgC3XEd-eJdnOmt6K0w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gzNXEC3YEd-eJdnOmt6K0w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gzMI8C3YEd-eJdnOmt6K0w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_mlo8EC1REd-k69JKaRyf0w" supplier="_IA1V8C1REd-k69JKaRyf0w" client="_K3k5kC1REd-k69JKaRyf0w"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uevIYC3XEd-eJdnOmt6K0w" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_uevvcC3XEd-eJdnOmt6K0w" name="lang">
+        <eAnnotations xmi:id="_ugNIAC3XEd-eJdnOmt6K0w" source="Halma/Entwurf/GrobeStruktur.ucd" references="_ugMg8C3XEd-eJdnOmt6K0w"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ugMg8C3XEd-eJdnOmt6K0w" name="Object">
+          <eAnnotations xmi:id="_ugNIAS3XEd-eJdnOmt6K0w" source="Halma/Entwurf/GrobeStruktur.ucd"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ZR5sUC3ZEd-eJdnOmt6K0w" name="" supplier="_DUQ5IC1REd-k69JKaRyf0w" client="_IA1V8C1REd-k69JKaRyf0w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_fOu3IC3ZEd-eJdnOmt6K0w" name="" supplier="_K3k5kC1REd-k69JKaRyf0w" client="_Q9Av4C3XEd-eJdnOmt6K0w"/>
+    <profileApplication xmi:id="_wBh-0C09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wBmQQC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/UML2.profile.uml#_f9NXwJIyEd2ymsRPCrfQAQ"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/org.eclipse.uml2.uml.resources/profiles/UML2.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wBsW4C09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wBsW4S09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Deployment.profile.uml#_gPzkoXlkEdyC2_BXA89-Eg"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Deployment.profile.uml#_69q0IGkDEd2C2vBXA89-Eg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wBsW4i09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCK4AC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Xml_3.2_SN.profile.uml#_7JNEVSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Xml_3.2_SN.profile.uml#_RgVfXCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCK4AS09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCLfEC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Process_3.2_SN.profile.uml#_7D2DMCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Process_3.2_SN.profile.uml#_RgfOnSK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCLfES09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCMGIC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Meta_3.2_SN.profile.uml#_7sFH4CK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Meta_3.2_SN.profile.uml#_RgVcYiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCMGIS09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCNUQC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Persistence_3.2_SN.profile.uml#_AevloCK6EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Persistence_3.2_SN.profile.uml#_RgVfdiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCN7UC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCPJcC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Presentation_3.2_SN.profile.uml#_4Um1wCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Presentation_3.2_SN.profile.uml#_RgVcjiK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCPwgC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCQXkC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Common_3.2_SN.profile.uml#_7hMtlSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Common_3.2_SN.profile.uml#_RgfPHCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCQ-oC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCSMwC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Webservice_3.2_SN.profile.uml#_6jgWRSK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Webservice_3.2_SN.profile.uml#_RgVmWCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCVQEC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCV3IC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCWeMC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCXsUC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_EJn30IE0EduiecUdqhZMrw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCYTYC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCY6cC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Archetype.profile.uml#_f6v3QOROEduiB7qvAtFfTA"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Archetype.profile.uml#_j-cLoORNEduiB7qvAtFfTA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCY6cS09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCZhgC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_1iUoEdmNXYQzyImvfA"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_0iUoEdmNXYQzyImvfA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCaIkC09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCavoC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Service_3.2_SN.profile.uml#_6VpgcCK5EdujMN-Mf6X4Bw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Omondo_Service_3.2_SN.profile.uml#_RgMRQCK2Edu07u_JJk0LDQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_wCavoS09Ed-k69JKaRyf0w">
+      <eAnnotations xmi:id="_wCbWsC09Ed-k69JKaRyf0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLlH6MEdmbwasWWc4yvw"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLkH6MEdmbwasWWc4yvw"/>
+    </profileApplication>
+  </uml:Model>
+  <Meta:derive xmi:id="_mmEZ4C1REd-k69JKaRyf0w" base_Dependency="_mlo8EC1REd-k69JKaRyf0w"/>
+</xmi:XMI>
