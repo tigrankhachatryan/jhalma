@@ -1,0 +1,6 @@
+Normen
+
+UML Diagramme im XMI,JPEG,PDF Format 
+Texte im TXT Format 
+Bilder im JPEG,PDF Format
+Archive im ZIP Format
