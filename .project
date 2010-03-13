@@ -20,4 +20,16 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>com.omondo.uml.std.Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Halma/Planung/Vorgehensmodell.jpg</name>
+			<type>1</type>
+			<location>C:/Users/Locke/Desktop/EIS/eclipse-java-galileo-SR2-win32/eclipse/Halma/Halma/Planung/Vorgehensmodell.jpg</location>
+		</link>
+		<link>
+			<name>Halma/Planung/Vorgehensmodell.xml</name>
+			<type>1</type>
+			<location>C:/Users/Locke/Desktop/EIS/eclipse-java-galileo-SR2-win32/eclipse/Halma/Halma/Planung/Vorgehensmodell.xml</location>
+		</link>
+	</linkedResources>
 </projectDescription>
