@@ -7,7 +7,7 @@
 	
 	}
 	
-	public Spielstein(int[][] position,String farbe){
+	public Spielstein(int[][] position, String farbe){
 
 	}
 	

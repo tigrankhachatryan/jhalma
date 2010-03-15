@@ -6,7 +6,7 @@
 	
 	}
 	
-	public Spieler(Farbe farbe,String name){
+	public Spieler(Farbe farbe, String name){
 	
 	}
 	
