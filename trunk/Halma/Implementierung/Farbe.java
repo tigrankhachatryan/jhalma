@@ -1,1 +1,1 @@
-﻿public enum Farbe{Rot, Blau, Gelb, Grün, Schwarz, Weiß, Braun};
+﻿public enum Farbe {Rot, Blau, Gelb, Gruen, Schwarz, Weiss, Braun}
