@@ -11,7 +11,7 @@
 	
 	}
 	
-	public boolean getBesetzt(){
+	public boolean isBesetzt(){
 	
 	}
 	
