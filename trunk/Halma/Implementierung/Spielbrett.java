@@ -1,13 +1,13 @@
-﻿public class Spielbrett{
+public class Spielbrett{
 	
 	private int anzahlSpieler;
-	private int anzahlZüge;
+	private int anzahlZuege;
 	
 	public Spielbrett(){
 	
 	}
 	
-	public int zähleZüge(String name){
+	public int zaehleZuege(String name){
 	
 	}
 	
@@ -15,23 +15,27 @@
 	
 	}
 	
-	public boolean überprüfeZug(){
+	public boolean ueberpruefeZug(){
 	
 	}
 	
 	public int getAnzahlSpieler(){
-	
+		return anzahlSpieler;
 	}
 	
-	public int getAnzahlZüge(){
-	
+	public int getAnzahlZuege(){
+		return anzahlZuege;
 	}
 	
-	public void setAnzahlSpieler(){
-	
+	public void setAnzahlSpieler(int anzahlSpieler){
+		if (anzahlSpieler < 2 || anzahlSpieler == 5 || anzahlSpieler > 6){
+			System.out.println("Die Anzahl der Spieler darf nur 2, 3, 4 oder 6 betragen!");
+		}else{
+			this.anzahlSpieler = anzahlSpieler;
+		}
 	}
 	
-	public void setAnzahlZüge(){
-	
+	public void setAnzahlZuege(int anzahlZuege){
+		this.anzahlZuege = anzahlZuege;
 	}
 }

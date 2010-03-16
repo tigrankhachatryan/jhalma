@@ -1,5 +1,5 @@
-﻿public class Spielstein{
-
+public class Spielstein{
+	
 	private Farbe farbe;
 	private int[][] position;
 	
@@ -12,18 +12,18 @@
 	}
 	
 	public Farbe getFarbe(){
-	
+		return farbe;
 	}
 	
 	public int[][] getPosition(){
-	
+		return position;
 	}
 	
-	public void setFarbe(){
-	
+	public void setFarbe(Farbe farbe){
+		this.farbe = farbe;
 	}
 	
-	public void setPosition(){
-	
+	public void setPosition(int[][] position){
+		this.position = position;
 	}
 }
