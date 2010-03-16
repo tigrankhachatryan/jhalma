@@ -1,4 +1,4 @@
-﻿public class Spielfeld{
+public class Spielfeld{
 	
 	private boolean besetzt;
 	private Farbe farbe;
@@ -12,18 +12,18 @@
 	}
 	
 	public boolean isBesetzt(){
-	
+		return besetzt;
 	}
 	
 	public Farbe getFarbe(){
-	
+		return farbe;
 	}
 	
-	public void setBesetzt(){
-	
+	public void setBesetzt(boolean besetzt){
+		this.besetzt = besetzt;
 	}
 	
-	public void setFarbe(){
-	
+	public void setFarbe(Farbe farbe){
+		this.farbe = farbe;
 	}
 }
