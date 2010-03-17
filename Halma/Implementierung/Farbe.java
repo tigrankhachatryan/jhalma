@@ -1,1 +1,1 @@
-﻿public enum Farbe {Rot, Blau, Gelb, Gruen, Schwarz, Weiss, Braun}
+public enum Farbe {KF, Frei, Rot, Blau, Gelb, Gruen, Schwarz, Weiss, Braun}
