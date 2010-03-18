@@ -1,17 +1,14 @@
 public class Spielfeld{
 	
-	private boolean besetzt;
+	private Boolean besetzt;
 	private Farbe farbe;
 	
 	public Spielfeld(){
-	
+		this.besetzt = new Boolean();
+		this.farbe = Farbe.Rot;
 	}
 	
-	public boolean istBesetzt(int[][] position){
-	
-	}
-	
-	public boolean isBesetzt(){
+	public Boolean isBesetzt(){
 		return besetzt;
 	}
 	
@@ -19,8 +16,8 @@ public class Spielfeld{
 		return farbe;
 	}
 	
-	public void setBesetzt(boolean besetzt){
-		this.besetzt = besetzt;
+	public void setBesetzt(Boolean besetzt){
+		this.besetzt = new Boolean(besetzt.booleanValue());
 	}
 	
 	public void setFarbe(Farbe farbe){

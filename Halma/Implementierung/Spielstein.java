@@ -1,21 +1,18 @@
 public class Spielstein{
 	
 	private Farbe farbe;
-	private int[][] position;
+	private position Position; // Der erste Wert eines Objekts vom Typ Position ist immer der x-Wert, der zweite der y-Wert!
 	
-	public Spielstein(){
-	
-	}
-	
-	public Spielstein(int[][] position, String farbe){
-
+	public Spielstein(position Position, Farbe farbe){
+		this.position = new Position(position.getX(), position.getY());
+		this.farbe = Farbe.farbe;
 	}
 	
 	public Farbe getFarbe(){
 		return farbe;
 	}
 	
-	public int[][] getPosition(){
+	public Position getPosition(){
 		return position;
 	}
 	
@@ -23,7 +20,7 @@ public class Spielstein{
 		this.farbe = farbe;
 	}
 	
-	public void setPosition(int[][] position){
-		this.position = position;
+	public void setPosition(Position position){
+		this.position = new Position(position.getX, position.getY);
 	}
 }
