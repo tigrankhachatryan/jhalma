@@ -3,9 +3,9 @@ public class Spielfeld{
 	private Boolean besetzt;
 	private Farbe farbe;
 	
-	public Spielfeld(){
-		this.besetzt = new Boolean();
-		this.farbe = Farbe.Rot;
+	public Spielfeld(Boolean besetzt, Farbe farbe){
+		this.besetzt = new Boolean(besetzt.booleanValue());
+		this.farbe = Farbe.farbe;
 	}
 	
 	public Boolean isBesetzt(){
