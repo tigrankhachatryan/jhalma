@@ -48,11 +48,11 @@ public class Spielbrett{
 	}
 	
 	public Integer getAnzahlSpieler(){
-		return anzahlSpieler;
+		return new Integer(this.anzahlSpieler.intValue());
 	}
 	
 	public Integer getAnzahlZuege(){
-		return anzahlZuege;
+		return new Integer(this.anzahlZuege.intValue());
 	}
 	
 	public void setAnzahlSpieler(Integer anzahlSpieler){

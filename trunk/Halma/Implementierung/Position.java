@@ -4,8 +4,8 @@ public class Position{
 	private Integer y;
 	
 	public Position(){
-		x = new Integer(0);
-		y = new Integer(0);
+		this.x = new Integer(0);
+		this.y = new Integer(0);
 	}
 	
 	public Position(Integer x, Integer y){
@@ -14,11 +14,11 @@ public class Position{
 	}
 	
 	public Integer getX(){
-		return x;
+		return new Integer(this.x.intValue());
 	}
 	
 	public Integer getY(){
-		return y;
+		return new Integer(this.y.intValue());
 	}
 	
 	public void setX(Integer x){

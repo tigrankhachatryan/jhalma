@@ -13,7 +13,7 @@ public class Spielstein{
 	}
 	
 	public Position getPosition(){
-		return position;
+		return new Position(this.position.getX(), this.position.getY());
 	}
 	
 	public void setFarbe(Farbe farbe){
