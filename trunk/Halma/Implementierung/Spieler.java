@@ -1,13 +1,11 @@
 public class Spieler{
 	
 	private String name;
-	
-	public Spieler(){
-	
-	}
+	private Farbe farbe;
 	
 	public Spieler(Farbe farbe, String name){
-	
+		this.farbe = Farbe.farbe;
+		this.name = new String(name.toString());
 	}
 	
 	public void ziehen(){

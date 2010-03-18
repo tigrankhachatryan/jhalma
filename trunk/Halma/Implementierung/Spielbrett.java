@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Spielbrett{
 	
-	private int anzahlSpieler;
-	private int anzahlZuege;
+	private Integer anzahlSpieler;
+	private Integer anzahlZuege;
 	
-	ArrayList<ArrayList<Farbe>> spielbrett;
+	private ArrayList<ArrayList<Farbe>> spielbrett;
 	
 	public Spielbrett(){
 		spielbrett = new ArrayList<ArrayList<Farbe>>();
@@ -35,35 +35,35 @@ public class Spielbrett{
 		}
 	}
 	
-	public int zaehleZuege(String name){
-		return 0;
+	public Integer zaehleZuege(String name){
+		return new Integer(0);
 	}
 	
-	public String werIstDran(){
-		return new String();
+	public Spieler werIstDran(){
+		return new Spieler();
 	}
 	
-	public boolean ueberpruefeZug(){
+	public Boolean ueberpruefeZug(){
 		return true;
 	}
 	
-	public int getAnzahlSpieler(){
+	public Integer getAnzahlSpieler(){
 		return anzahlSpieler;
 	}
 	
-	public int getAnzahlZuege(){
+	public Integer getAnzahlZuege(){
 		return anzahlZuege;
 	}
 	
-	public void setAnzahlSpieler(int anzahlSpieler){
-		if (anzahlSpieler < 2 || anzahlSpieler == 5 || anzahlSpieler > 6){
+	public void setAnzahlSpieler(Integer anzahlSpieler){
+		if (anzahlSpieler.intValue() < 2 || anzahlSpieler.intValue() == 5 || anzahlSpieler.intValue() > 6){
 			System.out.println("Die Anzahl der Spieler darf nur 2, 3, 4 oder 6 betragen!");
 		}else{
-			this.anzahlSpieler = anzahlSpieler;
+			this.anzahlSpieler = new Integer(anzahlSpieler.intValue());
 		}
 	}
 	
-	public void setAnzahlZuege(int anzahlZuege){
-		this.anzahlZuege = anzahlZuege;
+	public void setAnzahlZuege(Integer anzahlZuege){
+		this.anzahlZuege = new Integer(anzahlZuege.intValue());
 	}
 }

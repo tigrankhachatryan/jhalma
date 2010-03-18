@@ -1,4 +1,5 @@
 public class TestProgramm{
+	
 	public static void main(String[] args){
 		
 		Spielbrett halmafeld = new Spielbrett();
@@ -9,9 +10,6 @@ public class TestProgramm{
 					System.out.print("-");
 				}else{
 					System.out.print("*");
-				}
-				if(x == 24){
-					System.out.print("\n");
 				}
 				if(x == 24){
 					System.out.print("\n");
