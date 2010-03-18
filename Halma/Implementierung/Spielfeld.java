@@ -9,7 +9,7 @@ public class Spielfeld{
 	}
 	
 	public Boolean isBesetzt(){
-		return besetzt;
+		return new Boolean(this.besetzt.booleanValue());
 	}
 	
 	public Farbe getFarbe(){

@@ -13,10 +13,10 @@ public class Spieler{
 	}
 	
 	public String getName(){
-		return name;
+		return new String(this.name.toString());
 	}
 	
 	public void setName(String name){
-		this.name = name;
+		this.name = new String(name.toString());
 	}
 }
