@@ -1,6 +1,7 @@
 Normen
 
-UML Diagramme im XMI,JPEG,PDF Format 
-Texte im TXT Format 
-Bilder im JPEG,PDF Format
+UML Diagramme als EAP Projekt und im JPEG Format
+Texte im TXT und PDF Format
+Bilder im JPEG und PDF Format
 Archive im ZIP Format
+GUI Prototypen im JPEG Format
