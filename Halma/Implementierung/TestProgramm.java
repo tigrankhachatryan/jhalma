@@ -1,5 +1,5 @@
 import view.*;
-import model.*
+import model.*;
 public class TestProgramm{
 	
 	public static void main(String[] args){

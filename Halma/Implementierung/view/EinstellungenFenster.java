@@ -1,5 +1,4 @@
 package view;
-
 import model.*;
 import java.awt.Color;
 import java.awt.GridLayout;
