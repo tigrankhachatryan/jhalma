@@ -19,7 +19,7 @@ public class EinstellungenFenster extends JFrame{
 	
 		super("Einstellungen");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setSize(300, 150);
+		//this.setSize(300, 150); wird durch this.pack(); hinfällig
 		this.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.getContentPane().setLayout(new GridBagLayout());
 		
