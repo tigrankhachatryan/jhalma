@@ -14,9 +14,9 @@ public class HalmaFenster{
 	private JFrame frame;
 	private JButton buttonSpielBeenden, buttonNeuesSpiel, buttonEinstellungen;
 	private JLabel labelReihe, labelAnzahlZuege, labelSpieler, labelZuege;
-	private JMenu menu1, menu2;
+	private JMenu menuSpiel, menuHilfe;
 	private JMenuBar menuBar;
-	private JMenuItem menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6;
+	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo;
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
@@ -26,151 +26,128 @@ public class HalmaFenster{
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
-		// Komponenten hinzufügen
-		this.initializeSwingElements();
-		this.setAllocations();
+		// GUI erzeugen
+		this.createGUI();
 		// Fenstergröße anpassen und zeigen
 		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
-		this.frame.setSize(700,600);
+		this.frame.setSize(1100,800);
 		this.frame.setVisible(true);
 	}
-	
+
 	/*
 	 * Hilfsmethode
 	 */
-	public void initializeSwingElements(){
-	
-		this.buttonSpielBeenden = new JButton("Spiel beenden");
-		
-		this.buttonNeuesSpiel = new JButton("Neues Spiel");
-		
-		this.buttonEinstellungen = new JButton("Einstellungen");
-		
-		this.labelReihe = new JLabel("Wer ist an der Reihe?");
-		
-		this.labelAnzahlZuege = new JLabel("Anzahl der Züge");
-		
-		this.labelSpieler = new JLabel("Spieler 2");
-		
-		this.labelZuege = new JLabel("23");
-		
-		this.panelLeer = new JPanel();
-		
-		this.menuBar = new JMenuBar();
-		
-		this.menu1 = new JMenu("Spiel");
-		
-		this.menu2 = new JMenu("Hilfe");
-		
-		this.menuItem1 = new JMenuItem("Neues Spiel");
-		
-		this.menuItem2 = new JMenuItem("Einstellungen");
-		
-		this.menuItem3 = new JMenuItem("Bestenliste");
-		
-		this.menuItem4 = new JMenuItem("Spiel beenden");
-		
-		this.menuItem5 = new JMenuItem("Spielregeln");
-		
-		this.menuItem6 = new JMenuItem("Info");
-	}
-		
-	/*
-	 * Hilfsmethode
-	 */
-	public void setAllocations(){
+	private void createGUI(){
 	
 		this.c = new GridBagConstraints();
 		// buttonSpielBeenden
-		this.c.gridx = 2;
-		this.c.gridy = 2;
-		this.c.weightx = 0.5;
-		this.c.weighty = 1.0;
-		this.c.gridheight = 2;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonSpielBeenden, c);
+		this.buttonSpielBeenden = new JButton("Spiel beenden");
+		this.setConstraints(new Integer(4), new Integer(2), new Double(0.5), new Double(1.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.buttonSpielBeenden, this.c);
 		// buttonNeuesSpiel
-		this.c.gridx = 3;
-		this.c.gridy = 2;
-		this.c.weightx = 0.5;
-		this.c.weighty = 1.0;
-		this.c.gridheight = 2;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonNeuesSpiel, c);
+		this.buttonNeuesSpiel = new JButton("Neues Spiel");
+		this.setConstraints(new Integer(5), new Integer(2), new Double(0.5), new Double(1.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.buttonNeuesSpiel, this.c);
 		// buttonEinstellungen
-		this.c.gridx = 4;
-		this.c.gridy = 2;
-		this.c.weightx = 0.5;
-		this.c.weighty = 1.0;
-		this.c.gridheight = 2;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonEinstellungen, c);
-		// labelReihe // Müsste eine Zelle weiter oben sein.
-		this.c.gridx = 0;
-		this.c.gridy = 2;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(labelReihe, c);
-		// labelAnzahlZuege // Müsste eine Zelle weiter oben sein.
-		this.c.gridx = 1;
-		this.c.gridy = 2;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(labelAnzahlZuege, c);
+		this.buttonEinstellungen = new JButton("Einstellungen");
+		this.setConstraints(new Integer(6), new Integer(2), new Double(0.5), new Double(1.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.buttonEinstellungen, this.c);
+		// labelReihe
+		this.labelReihe = new JLabel("An der Reihe ist: ");
+		this.setLabelProperties(this.labelReihe, new Boolean(false), Color.BLUE);
+		this.setConstraints(new Integer(0), new Integer(2), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.labelReihe, this.c);
+		// labelAnzahlZuege
+		this.labelAnzahlZuege = new JLabel("Anzahl der Zuege: ");
+		this.setLabelProperties(this.labelAnzahlZuege, new Boolean(false), Color.BLUE);
+		this.setConstraints(new Integer(2), new Integer(2), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.labelAnzahlZuege, this.c);
 		// labelSpieler
-		this.c.gridx = 0;
-		this.c.gridy = 3;
-		this.c.weightx = 0.5;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.labelSpieler.setOpaque(true);
-		this.labelSpieler.setBackground(Color.WHITE);
-		this.frame.getContentPane().add(labelSpieler, c);
+		this.labelSpieler = new JLabel("Spieler 2");
+		this.setLabelProperties(this.labelSpieler, new Boolean(true), Color.WHITE);
+		this.setConstraints(new Integer(1), new Integer(2), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.labelSpieler, this.c);
 		// labelZuege
-		this.c.gridx = 1;
-		this.c.gridy = 3;
-		this.c.weightx = 0.5;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.labelZuege.setOpaque(true);
-		this.labelZuege.setBackground(Color.WHITE);
-		this.frame.getContentPane().add(labelZuege, c);
+		this.labelZuege = new JLabel("23");
+		this.setLabelProperties(this.labelZuege, new Boolean(true), Color.WHITE);
+		this.setConstraints(new Integer(3), new Integer(2), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.labelZuege, this.c);
 		// menuBar
-		this.c.gridx = 0;
-		this.c.gridy = 0;
-		this.c.gridwidth = 5;
-		this.c.weightx = 0.5;
-		this.c.anchor = GridBagConstraints.PAGE_START;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(0,0,0,0);
-		this.menuBar.add(menu1);
-		this.menuBar.add(menu2);
-		this.menu1.add(menuItem1);
-		this.menu1.add(menuItem2);
-		this.menu1.add(menuItem3);
-		this.menu1.add(menuItem4);
-		this.menu2.add(menuItem5);
-		this.menu2.add(menuItem6);
-		this.frame.getContentPane().add(menuBar, c);
+		this.createMenuBar();
+		this.setConstraints(new Integer(0), new Integer(0), new Double(0.5), new Double(0.0), new Integer(1), new Integer(5), new Integer(GridBagConstraints.PAGE_START),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(0), new Integer(0), new Integer(0), new Integer(0));
+		this.frame.getContentPane().add(this.menuBar, this.c);
 		// panelLeer
-		this.c = new GridBagConstraints();
-		this.c.gridx = 0;
-		this.c.gridy = 1;
-		this.c.gridwidth = 5;
-		this.c.gridheight = 4;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(0,0,0,0);
-		this.frame.getContentPane().add(panelLeer, c);
+		this.panelLeer = new JPanel();
+		this.setConstraints(new Integer(0), new Integer(1), new Double(0.5), new Double(0.0), new Integer(4), new Integer(5), new Integer(GridBagConstraints.PAGE_START),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(0), new Integer(0), new Integer(0), new Integer(0));
+		this.frame.getContentPane().add(this.panelLeer, this.c);
+	}
+	
+	/*
+	 *	Hilfsmethode
+	 */
+	private void setLabelProperties(JLabel label, Boolean opaque, Color color){
+	
+		label.setOpaque(opaque.booleanValue());
+		label.setBackground(color);
+	}
+	
+	/*
+	 * Hilfsmethode
+     */
+	private void createMenuBar(){
+		// initialize menubar
+		this.menuBar = new JMenuBar();
+		// initialize menus with mnemonics
+		this.menuSpiel = new JMenu("Spiel");
+		this.menuSpiel.setMnemonic('S');
+		this.menuHilfe = new JMenu("Hilfe");
+		this.menuHilfe.setMnemonic('H');
+		// add menus to menubar
+		this.menuBar.add(this.menuSpiel);
+		this.menuBar.add(this.menuHilfe);
+		// initialize menuitems with mnemonics
+		this.menuItemNeuesSpiel = new JMenuItem("Neues Spiel");
+		this.menuItemNeuesSpiel.setMnemonic('N');
+		this.menuItemEinstellungen = new JMenuItem("Einstellungen");
+		this.menuItemBestenliste = new JMenuItem("Bestenliste");
+		this.menuItemSpielBeenden = new JMenuItem("Spiel beenden");
+		this.menuItemSpielregeln = new JMenuItem("Spielregeln");
+		this.menuItemInfo = new JMenuItem("Info");
+		// add menuitems to menus with separators
+		this.menuSpiel.add(this.menuItemNeuesSpiel);
+		this.menuSpiel.addSeparator();
+		this.menuSpiel.add(this.menuItemEinstellungen);
+		this.menuSpiel.addSeparator();
+		this.menuSpiel.add(this.menuItemBestenliste);
+		this.menuSpiel.addSeparator();
+		this.menuSpiel.add(this.menuItemSpielBeenden);
+		this.menuHilfe.add(this.menuItemSpielregeln);
+		this.menuHilfe.addSeparator();
+		this.menuHilfe.add(this.menuItemInfo);
+	}
+	
+	/*
+	 * Hilfsmethode
+	 */
+	private void setConstraints(Integer gx, Integer gy, Double wx, Double wy, Integer gheight, Integer gwidth, Integer anker, Integer fuellen, Integer a, Integer b, Integer c, Integer d){
+		
+		this.c.gridx = gx.intValue();
+		this.c.gridy = gy.intValue();
+		this.c.weightx = wx.doubleValue();
+		this.c.weighty = wy.doubleValue();
+		this.c.gridheight = gheight.intValue();
+		this.c.gridwidth = gwidth.intValue();
+		this.c.anchor = anker.intValue();
+		this.c.fill = fuellen.intValue();
+		this.c.insets = new Insets(a.intValue(),b.intValue(),c.intValue(),d.intValue());
 	}
 }
