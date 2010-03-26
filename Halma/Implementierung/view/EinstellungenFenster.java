@@ -25,82 +25,73 @@ public class EinstellungenFenster{
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
-		// Komponenten hinzufügen
-		this.initializeSwingElements();
-		this.setAllocations();
+		// GUI erzeugen
+		this.createGUI();
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
 	}
-	
+
 	/*
 	 * Hilfsmethode
 	 */
-	private void initializeSwingElements(){
+	private void createGUI(){
 		
+		this.c = new GridBagConstraints();
+		// buttonAbbrechen
 		this.buttonAbbrechen = new JButton("Abbrechen");
-		
+		this.setConstraints(new Integer(2), new Integer(3), new Double(0.5), new Double(1.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(50), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(buttonAbbrechen, c);
+		// buttonOK	
 		this.buttonOK = new JButton("        OK        "); // Die Leerzeichen sollen die size des Buttons anpassen.
-		
+		this.setConstraints(new Integer(3), new Integer(3), new Double(0.5), new Double(1.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.PAGE_END),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(buttonOK, c);
+		// labelFarbeSpielbrett
 		this.labelFarbeSpielbrett = new JLabel("Farbe des Spielbretts");
-		
+		this.setConstraints(new Integer(0), new Integer(0), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(labelFarbeSpielbrett, c);
+		// comboBoxFarbeSpielbrett
 		this.comboBoxFarbeSpielbrett = new JComboBox();
-		//-------------------------------------------------------
-		Farbe[] arrayFarben = Farbe.values();
-		for(Farbe f : arrayFarben){
-			if(f != Farbe.KF && f != Farbe.Frei)
-				this.comboBoxFarbeSpielbrett.addItem(f);
-		}		
-		//-------------------------------------------------------
-		
+		this.setConstraints(new Integer(0), new Integer(1), new Double(0.5), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.füllen(comboBoxFarbeSpielbrett);
+		this.frame.getContentPane().add(comboBoxFarbeSpielbrett, c);
+		// panelLeer
 		this.panelLeer = new JPanel();
+		this.setConstraints(new Integer(0), new Integer(2), new Double(0.5), new Double(0.0), new Integer(1), new Integer(3), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(0), new Integer(0), new Integer(100), new Integer(100));
+		this.frame.getContentPane().add(panelLeer, c);	
 	}
 	
 	/*
 	 * Hilfsmethode
 	 */
-	private void setAllocations(){
+	private void füllen(JComboBox comboBox){
+	
+		Farbe[] arrayFarben = Farbe.values();
 		
-		this.c = new GridBagConstraints();
-		// buttonAbbrechen
-		this.c.gridx = 2;
-		this.c.gridy = 3;
-		this.c.weightx = 0.5;
-		this.c.weighty = 1.0;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,50,2,2);
-		this.frame.getContentPane().add(buttonAbbrechen, c);
-		// buttonOK	
-		this.c.gridx = 3;
-		this.c.gridy = 3;
-		this.c.weightx = 0.5;
-		this.c.weighty = 1.0;
-		this.c.anchor = GridBagConstraints.PAGE_END;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonOK, c);
-		// labelFarbeSpielbrett
-		this.c.gridx = 0;
-		this.c.gridy = 0;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(labelFarbeSpielbrett, c);
-		// comboBoxFarbeSpielbrett
-		this.c.gridx = 0;
-		this.c.gridy = 1;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(comboBoxFarbeSpielbrett, c);
-		// panelLeer
-		this.c.gridx = 0;
-		this.c.gridy = 2;
-		this.c.gridwidth = 3;
-		this.c.weightx = 0.5;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(0,0,100,100);
-		this.frame.getContentPane().add(panelLeer, c);	
+		for(Farbe f : arrayFarben){
+			if(f != Farbe.KF && f != Farbe.Frei)
+				comboBox.addItem(f);
+		}				
+	}
+	
+	/*
+	 * Hilfsmethode
+	 */
+	private void setConstraints(Integer gx, Integer gy, Double wx, Double wy, Integer gheight, Integer gwidth, Integer anker, Integer fuellen, Integer a, Integer b, Integer c, Integer d){
+		
+		this.c.gridx = gx.intValue();
+		this.c.gridy = gy.intValue();
+		this.c.weightx = wx.doubleValue();
+		this.c.weighty = wy.doubleValue();
+		this.c.gridheight = gheight.intValue();
+		this.c.gridwidth = gwidth.intValue();
+		this.c.anchor = anker.intValue();
+		this.c.fill = fuellen.intValue();
+		this.c.insets = new Insets(a.intValue(),b.intValue(),c.intValue(),d.intValue());
 	}
 }

@@ -20,50 +20,49 @@ public class SpielBeendenFenster{
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
-		// Komponenten hinzufügen
-		this.initializeSwingElements();
-		this.setAllocations();
+		// GUI erzeugen
+		this.createGUI();
 		// Fenstergröße anpassen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
+	}
+	 
+	/*
+	 * Hilfsmethode
+	 */
+	private void createGUI(){
+		
+		this.c = new GridBagConstraints();
+		// buttonJa
+		this.buttonJa = new JButton("Ja");
+		this.setConstraints(new Integer(2), new Integer(1), new Double(0.0), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.buttonJa, this.c);
+		// buttonNein
+		this.buttonNein = new JButton("         Nein         "); // Die Leerzeichen sollen die size des Buttons anpassen.
+		this.setConstraints(new Integer(1), new Integer(1), new Double(0.0), new Double(0.0), new Integer(1), new Integer(1), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.buttonNein, this.c);
+		// labelSpielBeenden
+		this.labelSpielBeenden = new JLabel("Möchten Sie das Spiel wirklich beenden?");
+		this.setConstraints(new Integer(1), new Integer(0), new Double(0.0), new Double(0.0), new Integer(1), new Integer(2), new Integer(GridBagConstraints.CENTER),
+							new Integer(GridBagConstraints.HORIZONTAL), new Integer(2), new Integer(2), new Integer(2), new Integer(2));
+		this.frame.getContentPane().add(this.labelSpielBeenden, this.c);
 	}
 	
 	/*
 	 * Hilfsmethode
 	 */
-	 public void initializeSwingElements(){
+	private void setConstraints(Integer gx, Integer gy, Double wx, Double wy, Integer gheight, Integer gwidth, Integer anker, Integer fuellen, Integer a, Integer b, Integer c, Integer d){
 		
-		this.buttonJa = new JButton("Ja");
-		
-		this.buttonNein = new JButton("         Nein         "); // Die Leerzeichen sollen die size des Buttons anpassen.
-		
-		this.labelSpielBeenden = new JLabel("Möchten Sie das Spiel wirklich beenden?");
-	 }
-	 
-	/*
-	 * Hilfsmethode
-	 */
-	public void setAllocations(){
-		
-		this.c = new GridBagConstraints();
-		// buttonJa
-		this.c.gridx = 2;
-		this.c.gridy = 1;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonJa, c);
-		// buttonNein
-		this.c.gridx = 1;
-		this.c.gridy = 1;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(buttonNein, c);
-		// labelSpielBeenden
-		this.c.gridx = 1;
-		this.c.gridy = 0;
-		this.c.gridwidth = 2;
-		this.c.fill = GridBagConstraints.HORIZONTAL;
-		this.c.insets = new Insets(2,2,2,2);
-		this.frame.getContentPane().add(labelSpielBeenden, c);
+		this.c.gridx = gx.intValue();
+		this.c.gridy = gy.intValue();
+		this.c.weightx = wx.doubleValue();
+		this.c.weighty = wy.doubleValue();
+		this.c.gridheight = gheight.intValue();
+		this.c.gridwidth = gwidth.intValue();
+		this.c.anchor = anker.intValue();
+		this.c.fill = fuellen.intValue();
+		this.c.insets = new Insets(a.intValue(),b.intValue(),c.intValue(),d.intValue());
 	}
 }
