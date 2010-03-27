@@ -29,6 +29,9 @@ public class NeuesSpielFenster implements ActionListener {
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
+		// Listener hinzufügen
+		this.buttonOK.addListener(new NSbuttonOKListener(this.buttonOK));
+		this.buttonAbbrechen.addListener(new NSbuttonAbbrechenListener(this.buttonAbbrechen));
 		// Fenstergröße anpassen und zeigen
 		//this.frame.pack();
 		this.frame.setSize(450,350);

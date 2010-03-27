@@ -28,6 +28,18 @@ public class HalmaFenster{
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
+		// Listener hinzufügen
+		this.buttonSpielBeenden.addListener(new HbuttonSpielBeendenListener(this.buttonSpielBeenden));
+		this.buttonNeuesSpiel.addListener(new HbuttonNeuesSpielListener(this.buttonNeuesSpiel));
+		this.buttonEinstellungen.addListener(new HbuttonEinstellungenListener(this.buttonEinstellungen));
+		this.menuItemNeuesSpiel.addMouseListener(new HmenuItemNeuesSpielListener(this.menuItemNeuesSpiel));
+		this.menuItemEinstellungen.addMouseListener(new HmenuItemEinstellungenListener(this.menuItemEinstellungen));
+		this.menuItemBestenliste.addMouseListener(new HmenuItemBestenlisteListener(this.menuItemBestenliste));
+		this.menuItemSpielBeenden.addMouseListener(new HmenuItemSpielBeendenListener(this.menuItemSpielBeenden));
+		this.menuItemSpielregeln.addMouseListener(new HmenuItemSpielregelnListener(this.menuItemSpielregeln));
+		this.menuItemInfo.addMouseListener(new HmenuItemInfoListener(this.menuItemInfo));
+		this.menuItemSpeichern.addMouseListener(new HmenuItemSpeichernListener(this.menuItemSpeichern));
+		this.menuItemLaden.addMouseListener(new HmenuItemLadenListener(this.menuItemLaden));
 		// Fenstergröße anpassen und zeigen
 		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
 		this.frame.setSize(1100,800);
