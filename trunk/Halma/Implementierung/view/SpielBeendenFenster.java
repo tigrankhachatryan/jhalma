@@ -1,5 +1,6 @@
 package view;
 import java.awt.*;
+import controller.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
