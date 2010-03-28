@@ -1,18 +1,21 @@
 package controller;
+import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public void EbuttonOKListener extends BasicButtonListener{
+public void EbuttonOKListener implements ActionListener{
 	
-	private JButton buttonOK;
+	private JFrame frame;
+	private Farbe farbeSpielbrett;
 	
-	public EbuttonOKListener(JButton buttonOK){
+	public EbuttonOKListener(JFrame frame, Farbe f){
 		
-		this.buttonOK = buttonOK;
+		this.frame = frame;
+		this.farbeSpielbrett = f;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 	
 	}
 }

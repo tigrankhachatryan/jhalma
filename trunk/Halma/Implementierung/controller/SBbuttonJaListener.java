@@ -1,18 +1,19 @@
 package controller;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SBbuttonJaListener extends BasicButtonListener{
+public class SBbuttonJaListener implements ActionListener{
 	
-	private JButton buttonJa;
+	private JFrame frame;
 	
-	public SBbuttonJaListener(JButton buttonJa){
+	public SBbuttonJaListener(JFrame frame){
 		
-		this.buttonJa = buttonJa;
+		this.frame = frame;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 	
 	}
 }

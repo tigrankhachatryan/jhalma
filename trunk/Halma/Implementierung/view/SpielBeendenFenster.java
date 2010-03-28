@@ -24,10 +24,8 @@ public class SpielBeendenFenster{
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
-		/*
-		this.buttonJa.addListener(new SBbuttonJaListener(this.buttonJa));
-		this.buttonNein.addListener(new SBbuttonNeinListener(this.buttonNein));
-		*/
+		this.buttonJa.addActionListener(new SBbuttonJaListener(this.frame)); // es fehlen noch Parameter, nämlich die frame Referenz der anderen Fenster
+		this.buttonNein.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
