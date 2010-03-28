@@ -3,16 +3,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HbuttonEinstellungenListener extends BasicButtonListener{
+public class HbuttonEinstellungenListener implements ActionListener{
 	
-	private JButton buttonEinstellungen;
 	
-	public HbuttonEinstellungenListener(JButton buttonEinstellungen){
+	public HbuttonEinstellungenListener(){
 	
-		this.buttonEinstellungen = buttonEinstellungen;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 	
 	}
 }

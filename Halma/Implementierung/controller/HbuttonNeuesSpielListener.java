@@ -3,16 +3,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HbuttonNeuesSpielListener extends BasicButtonListener{
+public class HbuttonNeuesSpielListener implements ActionListener{
 	
-	private JButton buttonNeuesSpiel;
+	public HbuttonNeuesSpielListener(){
 	
-	public HbuttonNeuesSpielListener(JButton buttonNeuesSpiel){
-	
-		this.buttonNeuesSpiel = buttonNeuesSpiel;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 	
 	}
 }

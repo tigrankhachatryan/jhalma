@@ -3,16 +3,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HbuttonSpielBeendenListener extends BasicButtonListener{
+public class HbuttonSpielBeendenListener implements ActionListener{
 	
-	private JButton buttonSpielBeenden;
+	public HbuttonSpielBeendenListener(){
 	
-	public HbuttonSpielBeendenListener(JButton buttonSpielBeenden){
-	
-		this.buttonSpielBeeden = buttonSpielBeenden;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 	
 	}
 }

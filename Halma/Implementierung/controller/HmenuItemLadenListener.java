@@ -3,16 +3,13 @@ import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HmenuItemLadenListener extends BasicMenuItemUI.MouseInputHandler{
+public class HmenuItemLadenListener implements ActionListener{
 	
-	private JMenuItem menuItemLaden;
-	
-	public HmenuItemLadenListener(JMenuItem menuItemLaden){
+	public HmenuItemLadenListener(){
 		
-		this.menuItemLaden = menuItemLaden;
 	}
 	
-	public void mouseClicked(MouseEvent e){
-		
+	public void actionPerformed(ActionEvent e){
+	
 	}
 }

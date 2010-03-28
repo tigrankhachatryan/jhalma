@@ -1,10 +1,11 @@
 package controller;
+import model.*;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public void EbuttonOKListener implements ActionListener{
+public class EbuttonOKListener implements ActionListener{
 	
 	private JFrame frame;
 	private Farbe farbeSpielbrett;
