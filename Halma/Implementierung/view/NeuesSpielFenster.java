@@ -32,8 +32,10 @@ public class NeuesSpielFenster implements ActionListener {
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
+		/*
 		this.buttonOK.addListener();
 		this.buttonAbbrechen.addListener();
+		*/
 		// Fenstergröße anpassen und zeigen
 		//this.frame.pack();
 		this.frame.setSize(450,350);
