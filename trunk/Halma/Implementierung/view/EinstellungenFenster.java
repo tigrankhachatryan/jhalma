@@ -28,8 +28,10 @@ public class EinstellungenFenster{
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
+		/*
 		this.buttonOK.addListener(new EbuttonAbbrechenListener(this.buttonAbbrechen));
 		this.buttonAbbrechen.addListener(new EbuttonAbbrechenListener(this.buttonAbbrechen));
+		*/
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
