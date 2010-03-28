@@ -30,19 +30,17 @@ public class HalmaFenster{
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
-		/*
-		this.buttonSpielBeenden.addListener(new HbuttonSpielBeendenListener(this.buttonSpielBeenden));
-		this.buttonNeuesSpiel.addListener(new HbuttonNeuesSpielListener(this.buttonNeuesSpiel));
-		this.buttonEinstellungen.addListener(new HbuttonEinstellungenListener(this.buttonEinstellungen));
-		this.menuItemNeuesSpiel.addMouseListener(new HmenuItemNeuesSpielListener(this.menuItemNeuesSpiel));
-		this.menuItemEinstellungen.addMouseListener(new HmenuItemEinstellungenListener(this.menuItemEinstellungen));
-		this.menuItemBestenliste.addMouseListener(new HmenuItemBestenlisteListener(this.menuItemBestenliste));
-		this.menuItemSpielBeenden.addMouseListener(new HmenuItemSpielBeendenListener(this.menuItemSpielBeenden));
-		this.menuItemSpielregeln.addMouseListener(new HmenuItemSpielregelnListener(this.menuItemSpielregeln));
-		this.menuItemInfo.addMouseListener(new HmenuItemInfoListener(this.menuItemInfo));
-		this.menuItemSpeichern.addMouseListener(new HmenuItemSpeichernListener(this.menuItemSpeichern));
-		this.menuItemLaden.addMouseListener(new HmenuItemLadenListener(this.menuItemLaden));
-		*/
+		this.buttonSpielBeenden.addActionListener(new HbuttonSpielBeendenListener());
+		this.buttonNeuesSpiel.addActionListener(new HbuttonNeuesSpielListener());
+		this.buttonEinstellungen.addActionListener(new HbuttonEinstellungenListener());
+		this.menuItemSpielBeenden.addActionListener(new HbuttonSpielBeendenListener());
+		this.menuItemNeuesSpiel.addActionListener(new HbuttonNeuesSpielListener());
+		this.menuItemEinstellungen.addActionListener(new HbuttonEinstellungenListener());
+		this.menuItemBestenliste.addActionListener(new HmenuItemBestenlisteListener());
+		this.menuItemSpielregeln.addActionListener(new HmenuItemSpielregelnListener());
+		this.menuItemInfo.addActionListener(new HmenuItemInfoListener());
+		this.menuItemSpeichern.addActionListener(new HmenuItemSpeichernListener());
+		this.menuItemLaden.addActionListener(new HmenuItemLadenListener());
 		// Fenstergröße anpassen und zeigen
 		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
 		this.frame.setSize(1100,800);

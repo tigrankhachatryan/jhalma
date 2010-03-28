@@ -44,10 +44,13 @@ public class NeuesSpielFenster implements ActionListener {
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
-		this.buttonOK.addActionListener(new NSbuttonOKListener(this.frame, (String)this.comboBoxAnzahlSpieler.getSelectedItem(), valueOf(Farbe, (String)this.comboBoxFarbeSpieler1.getSelectedItem()),
-														 valueOf(Farbe, (String)this.comboBoxFarbeSpieler2.getSelectedItem()), valueOf(Farbe, (String)this.comboBoxFarbeSpieler3.getSelectedItem()),
-														 valueOf(Farbe, (String)this.comboBoxFarbeSpieler4.getSelectedItem()), valueOf(Farbe, (String)this.comboBoxFarbeSpieler5.getSelectedItem()),
-														 valueOf(Farbe, (String)this.comboBoxFarbeSpieler6.getSelectedItem())));
+		this.buttonOK.addActionListener(new NSbuttonOKListener(this.frame, (String)this.comboBoxAnzahlSpieler.getSelectedItem(), 
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler1.getSelectedItem()),
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler2.getSelectedItem()), 
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler3.getSelectedItem()),
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler4.getSelectedItem()), 
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler5.getSelectedItem()),
+															   Farbe.valueOf((String)this.comboBoxFarbeSpieler6.getSelectedItem())));
 		this.buttonAbbrechen.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		//this.frame.pack();

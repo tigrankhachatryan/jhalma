@@ -1,19 +1,19 @@
 package controller;
-import java.awt.*;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ButtonAbbrechenListener implements ActionListener{
 	
-	private JButton buttonAbbrechen;
+	private JFrame frame;
 	
-	public ButtonAbbrechenListener(JButton buttonAbbrechen){
+	public ButtonAbbrechenListener(JFrame frame){
 		
-		this.buttonAbbrechen = buttonAbbrechen;
+		this.frame = frame;
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void actionPerformed(ActionEvent e){
 		
 	}
 }

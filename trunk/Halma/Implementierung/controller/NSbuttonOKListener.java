@@ -1,4 +1,5 @@
 package controller;
+import model.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;

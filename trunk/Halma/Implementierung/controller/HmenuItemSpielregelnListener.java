@@ -3,16 +3,13 @@ import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HmenuItemSpielregelnListener extends BasicMenuItemUI.MouseInputHandler{
+public class HmenuItemSpielregelnListener implements ActionListener{
 	
-	private JMenuItem menuItemSpielregeln;
-	
-	public HmenuItemSpielregelnListener(JMenuItem menuItemSpielregeln){
+	public HmenuItemSpielregelnListener(){
 		
-		this.menuItemSpielregeln = menuItemSpielregeln;
 	}
 	
-	public void mouseClicked(MouseEvent e){
-		
+	public void actionPerformed(ActionEvent e){
+	
 	}
 }
