@@ -1,5 +1,6 @@
 package view;
 import model.*;
+import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -18,12 +19,23 @@ public class NeuesSpielFenster implements ActionListener {
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
-	String[] arrayFarben = new String[] {"",Farbe.Rot.toString(),Farbe.Blau.toString(),Farbe.Gelb.toString(),Farbe.Gruen.toString(),Farbe.Schwarz.toString(),Farbe.Weiss.toString()};
+	private String[] strArrayFarben;
 	
 	/*
 	 * Standard-Konstruktor.
 	 */
 	public NeuesSpielFenster(){
+		//Initialisierungen
+		Integer i = new Integer(1);
+		Farbe[] arrayFarben = Farbe.values();
+		strArrayFarben = new String[arrayFarben.length + 1 - 2];  //KF und Frei werden wieder rausgenommen
+		strArrayFarben[0] = new String();
+		for(Farbe f : arrayFarben) {
+			if (!(f.equals(Farbe.KF)) && !(f.equals(Farbe.Frei))) {
+				strArrayFarben[i.intValue()] = f.toString();
+				i = new Integer(i.intValue() + 1);
+			}
+		}
 		// Basiseinstellungen	
 		this.frame = new JFrame("Neues Spiel");
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -193,7 +205,7 @@ public class NeuesSpielFenster implements ActionListener {
 			
 			for(int j = 0; j < 7; j++){
 				
-				comboBox.addItem(arrayFarben[j]);
+				comboBox.addItem(strArrayFarben[j]);
 			}
 		}
 	}
@@ -205,7 +217,7 @@ public class NeuesSpielFenster implements ActionListener {
 		
 		for(int i = 0; i < 7; i++){
 			
-			comboBox.removeItem(arrayFarben[i]);
+			comboBox.removeItem(strArrayFarben[i]);
 		}
 	}
 	
@@ -218,42 +230,24 @@ public class NeuesSpielFenster implements ActionListener {
 			
 			String str = (String)cb.getSelectedItem();
 			updateGUI(str);
-		}else{
-			if(cb == comboBoxFarbeSpieler1){
-			
-				String str = (String)cb.getSelectedItem();
-				updateComboBox(str, cb);
-			}else{
-				if(cb == comboBoxFarbeSpieler2){
-				
-					String str = (String)cb.getSelectedItem();
-					updateComboBox(str, cb);
-				}else{
-					if(cb == comboBoxFarbeSpieler3){
-					
-						String str = (String)cb.getSelectedItem();
-						updateComboBox(str, cb);
-					}else{
-						if(cb == comboBoxFarbeSpieler4){
-					
-							String str = (String)cb.getSelectedItem();
-							updateComboBox(str, cb);
-						}else{
-							if(cb == comboBoxFarbeSpieler5){
-					
-								String str = (String)cb.getSelectedItem();
-								updateComboBox(str, cb);
-							}else{
-								if(cb == comboBoxFarbeSpieler6){
-					
-									String str = (String)cb.getSelectedItem();
-									updateComboBox(str, cb);
-								}
-							}
-						}
-					}
-				}
-			}
+		}else if(cb == comboBoxFarbeSpieler1){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
+		}else if(cb == comboBoxFarbeSpieler2){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
+		}else if(cb == comboBoxFarbeSpieler3){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
+		}else if(cb == comboBoxFarbeSpieler4){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
+		}else if(cb == comboBoxFarbeSpieler5){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
+		}else if(cb == comboBoxFarbeSpieler6){
+			String str = (String)cb.getSelectedItem();
+			updateComboBox(str, cb);
 		}
 	}
 	
@@ -271,38 +265,34 @@ public class NeuesSpielFenster implements ActionListener {
 			this.labelSpieler5.setVisible(false);
 			this.comboBoxFarbeSpieler6.setVisible(false);
 			this.labelSpieler6.setVisible(false);
-		}else{
-			if(str.equals(new String("3 Spieler"))){
-				this.comboBoxFarbeSpieler3.setVisible(true);
-				this.labelSpieler3.setVisible(true);
-				this.comboBoxFarbeSpieler4.setVisible(false);
-				this.labelSpieler4.setVisible(false);
-				this.comboBoxFarbeSpieler5.setVisible(false);
-				this.labelSpieler5.setVisible(false);
-				this.comboBoxFarbeSpieler6.setVisible(false);
-				this.labelSpieler6.setVisible(false);
-			}else{
-				if(str.equals(new String("4 Spieler"))){
-					this.comboBoxFarbeSpieler3.setVisible(true);
-					this.labelSpieler3.setVisible(true);
-					this.comboBoxFarbeSpieler4.setVisible(true);
-					this.labelSpieler4.setVisible(true);
-					this.comboBoxFarbeSpieler5.setVisible(false);
-					this.labelSpieler5.setVisible(false);
-					this.comboBoxFarbeSpieler6.setVisible(false);
-					this.labelSpieler6.setVisible(false);
-				}else{
-					this.comboBoxFarbeSpieler3.setVisible(true);
-					this.labelSpieler3.setVisible(true);
-					this.comboBoxFarbeSpieler4.setVisible(true);
-					this.labelSpieler4.setVisible(true);
-					this.comboBoxFarbeSpieler5.setVisible(true);
-					this.labelSpieler5.setVisible(true);
-					this.comboBoxFarbeSpieler6.setVisible(true);
-					this.labelSpieler6.setVisible(true);
-				}
-			}
-		}
+		}else if(str.equals(new String("3 Spieler"))){
+			this.comboBoxFarbeSpieler3.setVisible(true);
+			this.labelSpieler3.setVisible(true);
+			this.comboBoxFarbeSpieler4.setVisible(false);
+			this.labelSpieler4.setVisible(false);
+			this.comboBoxFarbeSpieler5.setVisible(false);
+			this.labelSpieler5.setVisible(false);
+			this.comboBoxFarbeSpieler6.setVisible(false);
+			this.labelSpieler6.setVisible(false);
+		}else if(str.equals(new String("4 Spieler"))){
+			this.comboBoxFarbeSpieler3.setVisible(true);
+			this.labelSpieler3.setVisible(true);
+			this.comboBoxFarbeSpieler4.setVisible(true);
+			this.labelSpieler4.setVisible(true);
+			this.comboBoxFarbeSpieler5.setVisible(false);
+			this.labelSpieler5.setVisible(false);
+			this.comboBoxFarbeSpieler6.setVisible(false);
+			this.labelSpieler6.setVisible(false);
+		}else {
+			this.comboBoxFarbeSpieler3.setVisible(true);
+			this.labelSpieler3.setVisible(true);
+			this.comboBoxFarbeSpieler4.setVisible(true);
+			this.labelSpieler4.setVisible(true);
+			this.comboBoxFarbeSpieler5.setVisible(true);
+			this.labelSpieler5.setVisible(true);
+			this.comboBoxFarbeSpieler6.setVisible(true);
+			this.labelSpieler6.setVisible(true);
+		}	
 	}
 	
 	/*
@@ -332,44 +322,36 @@ public class NeuesSpielFenster implements ActionListener {
 			this.comboBoxFarbeSpieler4.removeItem(str);
 			this.comboBoxFarbeSpieler5.removeItem(str);
 			this.comboBoxFarbeSpieler6.removeItem(str);
-		}else{
-			if(cb == comboBoxFarbeSpieler2){
-				this.comboBoxFarbeSpieler1.removeItem(str);
-				this.comboBoxFarbeSpieler3.removeItem(str);
-				this.comboBoxFarbeSpieler4.removeItem(str);
-				this.comboBoxFarbeSpieler5.removeItem(str);
-				this.comboBoxFarbeSpieler6.removeItem(str);
-			}else{
-				if(cb == comboBoxFarbeSpieler3){
-					this.comboBoxFarbeSpieler1.removeItem(str);
-					this.comboBoxFarbeSpieler2.removeItem(str);
-					this.comboBoxFarbeSpieler4.removeItem(str);
-					this.comboBoxFarbeSpieler5.removeItem(str);
-					this.comboBoxFarbeSpieler6.removeItem(str);
-				}else{
-					if(cb == comboBoxFarbeSpieler4){
-						this.comboBoxFarbeSpieler1.removeItem(str);
-						this.comboBoxFarbeSpieler2.removeItem(str);
-						this.comboBoxFarbeSpieler3.removeItem(str);
-						this.comboBoxFarbeSpieler5.removeItem(str);
-						this.comboBoxFarbeSpieler6.removeItem(str);
-					}else{
-						if(cb == comboBoxFarbeSpieler5){
-							this.comboBoxFarbeSpieler1.removeItem(str);
-							this.comboBoxFarbeSpieler2.removeItem(str);
-							this.comboBoxFarbeSpieler3.removeItem(str);
-							this.comboBoxFarbeSpieler4.removeItem(str);
-							this.comboBoxFarbeSpieler6.removeItem(str);
-						}else{
-							this.comboBoxFarbeSpieler1.removeItem(str);
-							this.comboBoxFarbeSpieler2.removeItem(str);
-							this.comboBoxFarbeSpieler3.removeItem(str);
-							this.comboBoxFarbeSpieler4.removeItem(str);
-							this.comboBoxFarbeSpieler5.removeItem(str);
-						}
-					}
-				}
-			}
+		}else if(cb == comboBoxFarbeSpieler2){
+			this.comboBoxFarbeSpieler1.removeItem(str);
+			this.comboBoxFarbeSpieler3.removeItem(str);
+			this.comboBoxFarbeSpieler4.removeItem(str);
+			this.comboBoxFarbeSpieler5.removeItem(str);
+			this.comboBoxFarbeSpieler6.removeItem(str);
+		}else if(cb == comboBoxFarbeSpieler3){
+			this.comboBoxFarbeSpieler1.removeItem(str);
+			this.comboBoxFarbeSpieler2.removeItem(str);
+			this.comboBoxFarbeSpieler4.removeItem(str);
+			this.comboBoxFarbeSpieler5.removeItem(str);
+			this.comboBoxFarbeSpieler6.removeItem(str);
+		}else if(cb == comboBoxFarbeSpieler4){
+			this.comboBoxFarbeSpieler1.removeItem(str);
+			this.comboBoxFarbeSpieler2.removeItem(str);
+			this.comboBoxFarbeSpieler3.removeItem(str);
+			this.comboBoxFarbeSpieler5.removeItem(str);
+			this.comboBoxFarbeSpieler6.removeItem(str);
+		}else if(cb == comboBoxFarbeSpieler5){
+			this.comboBoxFarbeSpieler1.removeItem(str);
+			this.comboBoxFarbeSpieler2.removeItem(str);
+			this.comboBoxFarbeSpieler3.removeItem(str);
+			this.comboBoxFarbeSpieler4.removeItem(str);
+			this.comboBoxFarbeSpieler6.removeItem(str);
+		}else {
+			this.comboBoxFarbeSpieler1.removeItem(str);
+			this.comboBoxFarbeSpieler2.removeItem(str);
+			this.comboBoxFarbeSpieler3.removeItem(str);
+			this.comboBoxFarbeSpieler4.removeItem(str);
+			this.comboBoxFarbeSpieler5.removeItem(str);
 		}
 	}
 }

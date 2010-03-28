@@ -6,5 +6,6 @@ public class TestFenster{
 		new EinstellungenFenster();
 		new SpielBeendenFenster();
 		new NeuesSpielFenster();
+		new HalmaFenster();
 	}
 }
