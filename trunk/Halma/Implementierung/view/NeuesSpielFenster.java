@@ -19,20 +19,19 @@ public class NeuesSpielFenster implements ActionListener {
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
-	private String[] strArrayFarben;
+	private Farbe[] arrayFarben;
 	
 	/*
 	 * Standard-Konstruktor.
 	 */
 	public NeuesSpielFenster(){
 		//Initialisierungen
-		Integer i = new Integer(1);
-		Farbe[] arrayFarben = Farbe.values();
-		strArrayFarben = new String[arrayFarben.length + 1 - 2];  //KF und Frei werden wieder rausgenommen
-		strArrayFarben[0] = new String();
+		Integer i = new Integer(0);
+		Farbe[] arrayFarbenHilfe = Farbe.values();
+		arrayFarben = new Farbe[arrayFarbenHilfe.length - 2];  //KF und Frei werden wieder rausgenommen
 		for(Farbe f : arrayFarben) {
 			if (!(f.equals(Farbe.KF)) && !(f.equals(Farbe.Frei))) {
-				strArrayFarben[i.intValue()] = f.toString();
+				arrayFarben[i.intValue()] = f;
 				i = new Integer(i.intValue() + 1);
 			}
 		}
@@ -45,12 +44,12 @@ public class NeuesSpielFenster implements ActionListener {
 		this.createGUI();
 		// Listener hinzufügen
 		this.buttonOK.addActionListener(new NSbuttonOKListener(this.frame, (String)this.comboBoxAnzahlSpieler.getSelectedItem(), 
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler1.getSelectedItem()),
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler2.getSelectedItem()), 
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler3.getSelectedItem()),
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler4.getSelectedItem()), 
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler5.getSelectedItem()),
-															   Farbe.valueOf((String)this.comboBoxFarbeSpieler6.getSelectedItem())));
+															   (Farbe)this.comboBoxFarbeSpieler1.getSelectedItem(),
+															   (Farbe)this.comboBoxFarbeSpieler2.getSelectedItem(), 
+															   (Farbe)this.comboBoxFarbeSpieler3.getSelectedItem(),
+															   (Farbe)this.comboBoxFarbeSpieler4.getSelectedItem(), 
+															   (Farbe)this.comboBoxFarbeSpieler5.getSelectedItem(),
+															   (Farbe)this.comboBoxFarbeSpieler6.getSelectedItem()));
 		this.buttonAbbrechen.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		//this.frame.pack();
@@ -207,9 +206,10 @@ public class NeuesSpielFenster implements ActionListener {
 			comboBox.addItem(new String("6 Spieler"));
 		}else{
 			
-			for(int j = 0; j < 7; j++){
-				
-				comboBox.addItem(strArrayFarben[j]);
+			for(int j = 0; j < 6; j++){
+			
+				comboBox.addItem(new String());
+				comboBox.addItem(arrayFarben[j]);
 			}
 		}
 	}
@@ -221,7 +221,7 @@ public class NeuesSpielFenster implements ActionListener {
 		
 		for(int i = 0; i < 7; i++){
 			
-			comboBox.removeItem(strArrayFarben[i]);
+			comboBox.removeItem(arrayFarben[i]);
 		}
 	}
 	
@@ -231,27 +231,26 @@ public class NeuesSpielFenster implements ActionListener {
 		JComboBox cb = (JComboBox)e.getSource();
 		
 		if(cb == comboBoxAnzahlSpieler){
-			
 			String str = (String)cb.getSelectedItem();
 			updateGUI(str);
 		}else if(cb == comboBoxFarbeSpieler1){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}else if(cb == comboBoxFarbeSpieler2){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}else if(cb == comboBoxFarbeSpieler3){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}else if(cb == comboBoxFarbeSpieler4){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}else if(cb == comboBoxFarbeSpieler5){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}else if(cb == comboBoxFarbeSpieler6){
-			String str = (String)cb.getSelectedItem();
-			updateComboBox(str, cb);
+			Farbe f = (Farbe)cb.getSelectedItem();
+			updateComboBox(f, cb);
 		}
 	}
 	
@@ -302,7 +301,7 @@ public class NeuesSpielFenster implements ActionListener {
 	/*
 	 *	Hilfsmethode
 	 */
-	public void updateComboBox(String str, JComboBox cb){
+	public void updateComboBox(Farbe f, JComboBox cb){
 		
 		// funktioniert nicht richtig, wenn man eine Farbe auswählt sind plötzlich alle Einträge in der ComboBox fünfmal vorhanden
 		/*
@@ -321,41 +320,41 @@ public class NeuesSpielFenster implements ActionListener {
 		füllen(comboBoxFarbeSpieler6);
 		*/
 		if(cb == comboBoxFarbeSpieler1){
-			this.comboBoxFarbeSpieler2.removeItem(str);
-			this.comboBoxFarbeSpieler3.removeItem(str);
-			this.comboBoxFarbeSpieler4.removeItem(str);
-			this.comboBoxFarbeSpieler5.removeItem(str);
-			this.comboBoxFarbeSpieler6.removeItem(str);
+			this.comboBoxFarbeSpieler2.removeItem(f);
+			this.comboBoxFarbeSpieler3.removeItem(f);
+			this.comboBoxFarbeSpieler4.removeItem(f);
+			this.comboBoxFarbeSpieler5.removeItem(f);
+			this.comboBoxFarbeSpieler6.removeItem(f);
 		}else if(cb == comboBoxFarbeSpieler2){
-			this.comboBoxFarbeSpieler1.removeItem(str);
-			this.comboBoxFarbeSpieler3.removeItem(str);
-			this.comboBoxFarbeSpieler4.removeItem(str);
-			this.comboBoxFarbeSpieler5.removeItem(str);
-			this.comboBoxFarbeSpieler6.removeItem(str);
+			this.comboBoxFarbeSpieler1.removeItem(f);
+			this.comboBoxFarbeSpieler3.removeItem(f);
+			this.comboBoxFarbeSpieler4.removeItem(f);
+			this.comboBoxFarbeSpieler5.removeItem(f);
+			this.comboBoxFarbeSpieler6.removeItem(f);
 		}else if(cb == comboBoxFarbeSpieler3){
-			this.comboBoxFarbeSpieler1.removeItem(str);
-			this.comboBoxFarbeSpieler2.removeItem(str);
-			this.comboBoxFarbeSpieler4.removeItem(str);
-			this.comboBoxFarbeSpieler5.removeItem(str);
-			this.comboBoxFarbeSpieler6.removeItem(str);
+			this.comboBoxFarbeSpieler1.removeItem(f);
+			this.comboBoxFarbeSpieler2.removeItem(f);
+			this.comboBoxFarbeSpieler4.removeItem(f);
+			this.comboBoxFarbeSpieler5.removeItem(f);
+			this.comboBoxFarbeSpieler6.removeItem(f);
 		}else if(cb == comboBoxFarbeSpieler4){
-			this.comboBoxFarbeSpieler1.removeItem(str);
-			this.comboBoxFarbeSpieler2.removeItem(str);
-			this.comboBoxFarbeSpieler3.removeItem(str);
-			this.comboBoxFarbeSpieler5.removeItem(str);
-			this.comboBoxFarbeSpieler6.removeItem(str);
+			this.comboBoxFarbeSpieler1.removeItem(f);
+			this.comboBoxFarbeSpieler2.removeItem(f);
+			this.comboBoxFarbeSpieler3.removeItem(f);
+			this.comboBoxFarbeSpieler5.removeItem(f);
+			this.comboBoxFarbeSpieler6.removeItem(f);
 		}else if(cb == comboBoxFarbeSpieler5){
-			this.comboBoxFarbeSpieler1.removeItem(str);
-			this.comboBoxFarbeSpieler2.removeItem(str);
-			this.comboBoxFarbeSpieler3.removeItem(str);
-			this.comboBoxFarbeSpieler4.removeItem(str);
-			this.comboBoxFarbeSpieler6.removeItem(str);
+			this.comboBoxFarbeSpieler1.removeItem(f);
+			this.comboBoxFarbeSpieler2.removeItem(f);
+			this.comboBoxFarbeSpieler3.removeItem(f);
+			this.comboBoxFarbeSpieler4.removeItem(f);
+			this.comboBoxFarbeSpieler6.removeItem(f);
 		}else {
-			this.comboBoxFarbeSpieler1.removeItem(str);
-			this.comboBoxFarbeSpieler2.removeItem(str);
-			this.comboBoxFarbeSpieler3.removeItem(str);
-			this.comboBoxFarbeSpieler4.removeItem(str);
-			this.comboBoxFarbeSpieler5.removeItem(str);
+			this.comboBoxFarbeSpieler1.removeItem(f);
+			this.comboBoxFarbeSpieler2.removeItem(f);
+			this.comboBoxFarbeSpieler3.removeItem(f);
+			this.comboBoxFarbeSpieler4.removeItem(f);
+			this.comboBoxFarbeSpieler5.removeItem(f);
 		}
 	}
 }

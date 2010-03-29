@@ -29,7 +29,7 @@ public class EinstellungenFenster{
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
-		this.buttonOK.addActionListener(new EbuttonOKListener(this.frame, Farbe.<Farbe>valueOf(Farbe.getClass(),this.comboBoxFarbeSpielbrett.getSelectedItem().toString())));
+		this.buttonOK.addActionListener(new EbuttonOKListener(this.frame, (Farbe)this.comboBoxFarbeSpielbrett.getSelectedItem()));
 		this.buttonAbbrechen.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
