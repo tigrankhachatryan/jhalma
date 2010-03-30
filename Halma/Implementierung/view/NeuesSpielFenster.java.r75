@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JComboBox;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
- 
+
 public class NeuesSpielFenster implements ActionListener {
 
 	private JFrame frame;
