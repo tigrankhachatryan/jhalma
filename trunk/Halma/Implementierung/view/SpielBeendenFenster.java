@@ -1,6 +1,5 @@
 package view;
 import java.awt.*;
-import controller.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,14 +17,11 @@ public class SpielBeendenFenster{
 	public SpielBeendenFenster(){
 		// Basiseinstellungen
 		this.frame = new JFrame("Spiel beenden");
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
-		// Listener hinzufügen
-		this.buttonJa.addActionListener(new SBbuttonJaListener(this.frame)); // es fehlen noch Parameter, nämlich die frame Referenz der anderen Fenster
-		this.buttonNein.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);

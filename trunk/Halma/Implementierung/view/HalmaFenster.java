@@ -1,6 +1,5 @@
 package view;
 import model.*;
-import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,18 +28,6 @@ public class HalmaFenster{
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
-		// Listener hinzufügen
-		this.buttonSpielBeenden.addActionListener(new HbuttonSpielBeendenListener());
-		this.buttonNeuesSpiel.addActionListener(new HbuttonNeuesSpielListener());
-		this.buttonEinstellungen.addActionListener(new HbuttonEinstellungenListener());
-		this.menuItemSpielBeenden.addActionListener(new HbuttonSpielBeendenListener());
-		this.menuItemNeuesSpiel.addActionListener(new HbuttonNeuesSpielListener());
-		this.menuItemEinstellungen.addActionListener(new HbuttonEinstellungenListener());
-		this.menuItemBestenliste.addActionListener(new HmenuItemBestenlisteListener());
-		this.menuItemSpielregeln.addActionListener(new HmenuItemSpielregelnListener());
-		this.menuItemInfo.addActionListener(new HmenuItemInfoListener());
-		this.menuItemSpeichern.addActionListener(new HmenuItemSpeichernListener());
-		this.menuItemLaden.addActionListener(new HmenuItemLadenListener());
 		// Fenstergröße anpassen und zeigen
 		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
 		this.frame.setSize(1100,800);
@@ -94,9 +81,7 @@ public class HalmaFenster{
 		this.frame.getContentPane().add(this.labelZuege, this.c);
 		// menuBar
 		this.createMenuBar();
-		this.setConstraints(new Integer(0), new Integer(0), new Double(0.5), new Double(0.0), new Integer(1), new Integer(5), new Integer(GridBagConstraints.PAGE_START),
-							new Integer(GridBagConstraints.HORIZONTAL), new Integer(0), new Integer(0), new Integer(0), new Integer(0));
-		this.frame.getContentPane().add(this.menuBar, this.c);
+		this.frame.setJMenuBar(this.menuBar);
 		// panelLeer
 		this.panelLeer = new JPanel();
 		this.setConstraints(new Integer(0), new Integer(1), new Double(0.5), new Double(0.0), new Integer(4), new Integer(5), new Integer(GridBagConstraints.PAGE_START),

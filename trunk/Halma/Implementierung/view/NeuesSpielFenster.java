@@ -24,7 +24,7 @@ public class NeuesSpielFenster implements ActionListener {
 	public NeuesSpielFenster(){
 		// Basiseinstellungen	
 		this.frame = new JFrame("Neues Spiel");
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen

@@ -1,6 +1,5 @@
 package view;
 import model.*;
-import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,14 +22,11 @@ public class EinstellungenFenster{
 	public EinstellungenFenster(){
 		// Basiseinstellungen
 		this.frame = new JFrame("Einstellungen");
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
-		// Listener hinzufügen
-		this.buttonOK.addActionListener(new EbuttonOKListener(this.frame, (Farbe)this.comboBoxFarbeSpielbrett.getSelectedItem()));
-		this.buttonAbbrechen.addActionListener(new ButtonAbbrechenListener(this.frame));
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
