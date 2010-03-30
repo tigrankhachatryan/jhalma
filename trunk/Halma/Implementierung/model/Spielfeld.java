@@ -1,5 +1,5 @@
 package model;
-
+ 
 public class Spielfeld{
 	
 	private Boolean besetzt;

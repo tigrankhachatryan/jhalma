@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JComboBox;
-
+ 
 public class EinstellungenFenster{
 	
 	private JFrame frame;

@@ -17,7 +17,7 @@ public class HalmaFenster{
 	private JLabel labelReihe, labelAnzahlZuege, labelSpieler, labelZuege;
 	private JMenu menuSpiel, menuHilfe;
 	private JMenuBar menuBar;
-	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo, menuItemSpeichern, menuItemLaden;
+	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo;
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
@@ -130,8 +130,6 @@ public class HalmaFenster{
 		// initialize menuitems with mnemonics
 		this.menuItemNeuesSpiel = new JMenuItem("Neues Spiel");
 		this.menuItemNeuesSpiel.setMnemonic('N');
-		this.menuItemSpeichern = new JMenuItem("Speichern");
-		this.menuItemLaden = new JMenuItem("Laden");
 		this.menuItemEinstellungen = new JMenuItem("Einstellungen");
 		this.menuItemBestenliste = new JMenuItem("Bestenliste");
 		this.menuItemSpielBeenden = new JMenuItem("Spiel beenden");
@@ -140,10 +138,8 @@ public class HalmaFenster{
 		// add menuitems to menus with separators
 		this.menuSpiel.add(this.menuItemNeuesSpiel);
 		this.menuSpiel.addSeparator();
-		this.menuSpiel.add(this.menuItemSpeichern);
-		this.menuSpiel.add(this.menuItemLaden);
-		this.menuSpiel.addSeparator();
 		this.menuSpiel.add(this.menuItemEinstellungen);
+		this.menuSpiel.addSeparator();
 		this.menuSpiel.add(this.menuItemBestenliste);
 		this.menuSpiel.addSeparator();
 		this.menuSpiel.add(this.menuItemSpielBeenden);

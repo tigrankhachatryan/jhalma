@@ -1,5 +1,5 @@
 package model;
-
+ 
 public class Spielstein{
 	
 	private Farbe farbe;
