@@ -1,4 +1,5 @@
 package view;
+import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,6 +23,8 @@ public class SpielBeendenFenster{
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
+		// Listener hinzufügen
+		this.buttonNein.addActionListener(new AbbrechenButtonListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);

@@ -1,5 +1,6 @@
 package view;
 import model.*;
+import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -27,6 +28,8 @@ public class EinstellungenFenster{
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
+		// Listener hinzufügen
+		this.buttonAbbrechen.addActionListener(new AbbrechenButtonListener(this.frame));
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
