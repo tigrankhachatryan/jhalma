@@ -14,9 +14,11 @@ public class HalmaFenster{
 	private JFrame frame;
 	private JButton buttonSpielBeenden, buttonNeuesSpiel, buttonEinstellungen;
 	private JLabel labelReihe, labelAnzahlZuege, labelSpieler, labelZuege;
-	private JMenu menuSpiel, menuHilfe;
+	private JMenu menuSpiel, menuHilfe, menuLaden, menuSpeichern;
 	private JMenuBar menuBar;
-	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo;
+	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo, menuItemSpeichernSlot1,
+					  menuItemSpeichernSlot2, menuItemSpeichernSlot3, menuItemSpeichernSlot4, menuItemSpeichernSlot5, menuItemLadenSlot1, menuItemLadenSlot2, 
+					  menuItemLadenSlot3, menuItemLadenSlot4, menuItemLadenSlot5;
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
@@ -109,6 +111,8 @@ public class HalmaFenster{
 		this.menuSpiel.setMnemonic('S');
 		this.menuHilfe = new JMenu("Hilfe");
 		this.menuHilfe.setMnemonic('H');
+		this.menuSpeichern = new JMenu("Speichern");
+		this.menuLaden = new JMenu("Laden");
 		// add menus to menubar
 		this.menuBar.add(this.menuSpiel);
 		this.menuBar.add(this.menuHilfe);
@@ -120,11 +124,32 @@ public class HalmaFenster{
 		this.menuItemSpielBeenden = new JMenuItem("Spiel beenden");
 		this.menuItemSpielregeln = new JMenuItem("Spielregeln");
 		this.menuItemInfo = new JMenuItem("Info");
+		this.menuItemSpeichernSlot1 = new JMenuItem("< Slot 1 >");
+		this.menuItemSpeichernSlot2 = new JMenuItem("< Slot 2 >");
+		this.menuItemSpeichernSlot3 = new JMenuItem("< Slot 3 >");
+		this.menuItemSpeichernSlot4 = new JMenuItem("< Slot 4 >");
+		this.menuItemSpeichernSlot5 = new JMenuItem("< Slot 5 >");
+		this.menuItemLadenSlot1 = new JMenuItem("< Slot 1 >");
+		this.menuItemLadenSlot2 = new JMenuItem("< Slot 2 >");
+		this.menuItemLadenSlot3 = new JMenuItem("< Slot 3 >");
+		this.menuItemLadenSlot4 = new JMenuItem("< Slot 4 >");
+		this.menuItemLadenSlot5 = new JMenuItem("< Slot 5 >");
 		// add menuitems to menus with separators
 		this.menuSpiel.add(this.menuItemNeuesSpiel);
 		this.menuSpiel.addSeparator();
+		this.menuSpeichern.add(this.menuItemSpeichernSlot1);
+		this.menuSpeichern.add(this.menuItemSpeichernSlot2);
+		this.menuSpeichern.add(this.menuItemSpeichernSlot3);
+		this.menuSpeichern.add(this.menuItemSpeichernSlot4);
+		this.menuSpeichern.add(this.menuItemSpeichernSlot5);
+		this.menuLaden.add(this.menuItemLadenSlot1);
+		this.menuLaden.add(this.menuItemLadenSlot2);
+		this.menuLaden.add(this.menuItemLadenSlot3);
+		this.menuLaden.add(this.menuItemLadenSlot4);
+		this.menuLaden.add(this.menuItemLadenSlot5);
+		this.menuSpiel.add(this.menuSpeichern);
+		this.menuSpiel.add(this.menuLaden);
 		this.menuSpiel.add(this.menuItemEinstellungen);
-		this.menuSpiel.addSeparator();
 		this.menuSpiel.add(this.menuItemBestenliste);
 		this.menuSpiel.addSeparator();
 		this.menuSpiel.add(this.menuItemSpielBeenden);
