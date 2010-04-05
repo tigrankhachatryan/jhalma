@@ -1,7 +1,7 @@
 package test;
 
-import implementierung.view.*;
-import implementierung.model.*;
+import view.*;
+import model.*;
 
 public class TestView{
 

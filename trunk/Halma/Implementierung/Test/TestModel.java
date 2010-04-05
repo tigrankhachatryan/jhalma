@@ -1,5 +1,7 @@
-import implementierung.view.*;
-import implementierung.model.*;
+package test;
+
+import view.*;
+import model.*;
 
 public class TestModel{
 	

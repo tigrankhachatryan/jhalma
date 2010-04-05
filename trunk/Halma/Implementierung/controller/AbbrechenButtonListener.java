@@ -1,4 +1,4 @@
-package implementierung.controller;
+package controller;
 
 import view.*;
 import java.awt.event.*;
