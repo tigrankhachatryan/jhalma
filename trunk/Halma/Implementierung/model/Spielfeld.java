@@ -1,4 +1,4 @@
-package model;
+package implementierung.model;
  
 public class Spielfeld{
 	

@@ -1,6 +1,7 @@
-import view.*;
-import model.*;
-public class TestProgramm{
+import implementierung.view.*;
+import implementierung.model.*;
+
+public class TestModel{
 	
 	public static void main(String[] args){
 		

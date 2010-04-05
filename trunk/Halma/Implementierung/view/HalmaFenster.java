@@ -1,5 +1,7 @@
-package view;
+package implementierung.view;
+
 import model.*;
+import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,6 +32,10 @@ public class HalmaFenster{
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen
 		this.createGUI();
+		// Listener hinzufügen
+		this.buttonNeuesSpiel.addActionListener(new NeuesSpielButtonListener());
+		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener());
+		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener());
 		// Fenstergröße anpassen und zeigen
 		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
 		this.frame.setSize(1100,800);
