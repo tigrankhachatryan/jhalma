@@ -1,4 +1,4 @@
-package implementierung.view;
+package view;
 
 import model.*;
 import controller.*;
