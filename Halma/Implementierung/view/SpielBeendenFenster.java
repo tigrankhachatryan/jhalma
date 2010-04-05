@@ -1,4 +1,5 @@
-package view;
+package implementierung.view;
+
 import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
@@ -25,6 +26,7 @@ public class SpielBeendenFenster{
 		this.createGUI();
 		// Listener hinzufügen
 		this.buttonNein.addActionListener(new AbbrechenButtonListener(this.frame));
+		this.buttonJa.addActionListener(new OKButtonListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);

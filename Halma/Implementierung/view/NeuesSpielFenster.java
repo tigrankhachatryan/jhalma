@@ -1,4 +1,5 @@
-package view;
+package implementierung.view;
+
 import model.*;
 import controller.*;
 import java.awt.*;
@@ -32,6 +33,7 @@ public class NeuesSpielFenster implements ActionListener {
 		this.createGUI();
 		//Listener hinzufügen
 		this.buttonAbbrechen.addActionListener(new AbbrechenButtonListener(this.frame));
+		this.buttonOK.addActionListener(new OKButtonListener(this.frame));
 		// Fenstergröße anpassen und zeigen
 		this.frame.setSize(450,350);
 		this.frame.setVisible(true);

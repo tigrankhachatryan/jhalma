@@ -4,11 +4,11 @@ import view.*;
 import java.awt.event.*;
 import javax.swing.JFrame;
 
-public class AbbrechenButtonListener implements ActionListener{
+public class OKButtonListener implements ActionListener{
 	
 	private JFrame frame;
 	
-	public AbbrechenButtonListener(JFrame frame){
+	public OKButtonListener(JFrame frame){
 		
 		this.frame = frame;
 	}

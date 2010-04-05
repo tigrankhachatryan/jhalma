@@ -1,4 +1,5 @@
-package view;
+package implementierung.view;
+
 import model.*;
 import controller.*;
 import java.awt.*;
@@ -30,6 +31,7 @@ public class EinstellungenFenster{
 		this.createGUI();
 		// Listener hinzufügen
 		this.buttonAbbrechen.addActionListener(new AbbrechenButtonListener(this.frame));
+		this.buttonOK.addActionListener(new OKButtonListener(this.frame));
 		// Fenstergrösse anpasen und zeigen
 		this.frame.pack();	
 		this.frame.setVisible(true);
