@@ -4,12 +4,15 @@ public class Spielfeld{
 	
 	private Boolean besetzt;
 	private Farbe farbe;
-	private Position position;
 	
-	public Spielfeld(Boolean besetzt, Farbe farbe, Position position){
+	public Spielfeld(){
+		this.besetzt = new Boolean(besetzt.booleanValue());
+		this.farbe = Farbe.KF;
+	}
+	
+	public Spielfeld(Boolean besetzt, Farbe farbe){
 		this.besetzt = new Boolean(besetzt.booleanValue());
 		this.farbe = farbe;
-		this.position = position;
 	}
 	
 	public Boolean isBesetzt(){
