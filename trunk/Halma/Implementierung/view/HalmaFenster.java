@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HalmaFenster{
 
@@ -182,22 +184,22 @@ public class HalmaFenster{
 		this.menuHilfe.addSeparator();
 		this.menuHilfe.add(this.menuItemInfo);
 		//und schliesslich die Liste der menuItems füllen
-		this.menuItemList.add(this.menuItemNeuesSpiel)
-		this.menuItemList.add(this.menuItemEinstellungen)
-		this.menuItemList.add(this.menuItemBestenliste)
-		this.menuItemList.add(this.menuItemSpielBeenden)
-		this.menuItemList.add(this.menuItemSpielregeln)
-		this.menuItemList.add(this.menuItemInfo)
-		this.menuItemList.add(this.menuItemSpeichernSlot1)
-		this.menuItemList.add(this.menuItemSpeichernSlot2)
-		this.menuItemList.add(this.menuItemSpeichernSlot3)
-		this.menuItemList.add(this.menuItemSpeichernSlot4)
-		this.menuItemList.add(this.menuItemSpeichernSlot5)
-		this.menuItemList.add(this.menuItemLadenSlot1)
-		this.menuItemList.add(this.menuItemLadenSlot2)
-		this.menuItemList.add(this.menuItemLadenSlot3)
-		this.menuItemList.add(this.menuItemLadenSlot4)
-		this.menuItemList.add(this.menuItemLadenSlot5)
+		this.menuItemList.add(this.menuItemNeuesSpiel);
+		this.menuItemList.add(this.menuItemEinstellungen);
+		this.menuItemList.add(this.menuItemBestenliste);
+		this.menuItemList.add(this.menuItemSpielBeenden);
+		this.menuItemList.add(this.menuItemSpielregeln);
+		this.menuItemList.add(this.menuItemInfo);
+		this.menuItemList.add(this.menuItemSpeichernSlot1);
+		this.menuItemList.add(this.menuItemSpeichernSlot2);
+		this.menuItemList.add(this.menuItemSpeichernSlot3);
+		this.menuItemList.add(this.menuItemSpeichernSlot4);
+		this.menuItemList.add(this.menuItemSpeichernSlot5);
+		this.menuItemList.add(this.menuItemLadenSlot1);
+		this.menuItemList.add(this.menuItemLadenSlot2);
+		this.menuItemList.add(this.menuItemLadenSlot3);
+		this.menuItemList.add(this.menuItemLadenSlot4);
+		this.menuItemList.add(this.menuItemLadenSlot5);
 	}
 	
 	/*
