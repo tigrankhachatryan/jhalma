@@ -18,21 +18,24 @@ public class Spielbrett{
 			for(int x = 0; x < 25; x++){
 				// hier wird ein Schachbrettmuster erzeugt
 				if((y%2 == 0 && x%2 == 0) || (y%2 == 1 && x%2 == 1)){
-					spielbrett.get(y).add(x, new Spielfeld(false, Farbe.Frei, new Position(new Integer(x), new Integer(y))));
+					spielbrett.get(y).add(x, new Spielfeld(false, Farbe.Frei));
 				}else{
-					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
+					spielbrett.get(y).add(x, new Spielfeld());
 				}
 				// hier wird das Muster für die untere und obere Ecke des Halmabretts erzeugt
 				if(((x < (12-y) || x > (12+y)) && y < 4) || ((x > (28-y)) || (x < (y-4))) && y > 12){
-					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
+					spielbrett.get(y).add(x, new Spielfeld());
+				}
+				// hier wird das Muster für die linke und rechte untere Ecke des Halmabretts erzeugt
+					spielbrett.get(y).add(x, new Spielfeld());
 				}
 				// hier wird das Muster für die linke und rechte untere Ecke des Halmabretts erzeugt
 				if((x < (y-4) || x > (28-y)) && (y > 4 && y < 9)){
-					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
+					spielbrett.get(y).add(x, new Spielfeld());
 				}
 				// hier wird das Muster für die linke und rechte obere Ecke des Halmabretts erzeugt
 				if((x < (12-y) || x > (y+12)) && (y > 8 && y < 12)){
-					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
+					spielbrett.get(y).add(x, new Spielfeld());
 				}
 			}
 		}
@@ -58,8 +61,10 @@ public class Spielbrett{
 		return new Integer(this.anzahlZuege.intValue());
 	}
 	
-	public Spielfeld getSpielfeld(Position position){
-		return spielbrett.get(position.getY()).get(position.getX());
+	public Spielfeld getSpielfeld(Integer x, Integer y){
+		return new Spielfeld(spielbrett.get(y.intValue()).get(x.intValue()).isBesetzt(), spielbrett.get(y.intValue()).get(x.intValue()).getFarbe());
+	}
+		
 	}
 		
 	public void setAnzahlSpieler(Integer anzahlSpieler){
