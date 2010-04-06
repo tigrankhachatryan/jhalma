@@ -21,6 +21,7 @@ public class HalmaFenster{
 	private JMenuItem menuItemNeuesSpiel, menuItemEinstellungen, menuItemBestenliste, menuItemSpielBeenden, menuItemSpielregeln, menuItemInfo, menuItemSpeichernSlot1,
 					  menuItemSpeichernSlot2, menuItemSpeichernSlot3, menuItemSpeichernSlot4, menuItemSpeichernSlot5, menuItemLadenSlot1, menuItemLadenSlot2, 
 					  menuItemLadenSlot3, menuItemLadenSlot4, menuItemLadenSlot5;
+	private ArrayList<JMenuItem> menuItemList;
 	private JPanel panelLeer;
 	private GridBagConstraints c;
 	
@@ -36,9 +37,10 @@ public class HalmaFenster{
 		this.buttonNeuesSpiel.addActionListener(new NeuesSpielButtonListener());
 		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener());
 		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener());
-		this.menuItemNeuesSpiel.addActionListener(new MenuListener());
-		this.menuItemEinstellungen.addActionListener(new MenuListener());
-		this.menuItemSpielBeenden.addActionListener(new MenuListener());		
+		Iterator<JMenuItem> i = this.menuItemList.iterator();
+		while(i.hasNext()){
+			i.next().addActionListener(new MenuListener());
+		}	
 		// Fenstergröße anpassen und zeigen
 		this.frame.setSize(1000,625);
 		this.frame.setVisible(true);
@@ -179,6 +181,23 @@ public class HalmaFenster{
 		this.menuHilfe.add(this.menuItemSpielregeln);
 		this.menuHilfe.addSeparator();
 		this.menuHilfe.add(this.menuItemInfo);
+		//und schliesslich die Liste der menuItems füllen
+		this.menuItemList.add(this.menuItemNeuesSpiel)
+		this.menuItemList.add(this.menuItemEinstellungen)
+		this.menuItemList.add(this.menuItemBestenliste)
+		this.menuItemList.add(this.menuItemSpielBeenden)
+		this.menuItemList.add(this.menuItemSpielregeln)
+		this.menuItemList.add(this.menuItemInfo)
+		this.menuItemList.add(this.menuItemSpeichernSlot1)
+		this.menuItemList.add(this.menuItemSpeichernSlot2)
+		this.menuItemList.add(this.menuItemSpeichernSlot3)
+		this.menuItemList.add(this.menuItemSpeichernSlot4)
+		this.menuItemList.add(this.menuItemSpeichernSlot5)
+		this.menuItemList.add(this.menuItemLadenSlot1)
+		this.menuItemList.add(this.menuItemLadenSlot2)
+		this.menuItemList.add(this.menuItemLadenSlot3)
+		this.menuItemList.add(this.menuItemLadenSlot4)
+		this.menuItemList.add(this.menuItemLadenSlot5)
 	}
 	
 	/*
