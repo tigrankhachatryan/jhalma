@@ -1,4 +1,4 @@
-package implementierung.model;
+package model;
  
 public class Spielfeld{
 	
@@ -7,7 +7,7 @@ public class Spielfeld{
 	
 	public Spielfeld(Boolean besetzt, Farbe farbe){
 		this.besetzt = new Boolean(besetzt.booleanValue());
-		this.farbe = Farbe.farbe;
+		this.farbe = farbe;
 	}
 	
 	public Boolean isBesetzt(){

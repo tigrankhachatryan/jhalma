@@ -1,13 +1,13 @@
-package implementierung.model;
+package model;
  
 public class Spielstein{
 	
 	private Farbe farbe;
-	private position Position; // Der erste Wert eines Objekts vom Typ Position ist immer der x-Wert, der zweite der y-Wert!
+	private Position position; // Der erste Wert eines Objekts vom Typ Position ist immer der x-Wert, der zweite der y-Wert!
 	
-	public Spielstein(position Position, Farbe farbe){
+	public Spielstein(Position position, Farbe farbe){
 		this.position = new Position(position.getX(), position.getY());
-		this.farbe = Farbe.farbe;
+		this.farbe = farbe;
 	}
 	
 	public Farbe getFarbe(){
@@ -23,6 +23,6 @@ public class Spielstein{
 	}
 	
 	public void setPosition(Position position){
-		this.position = new Position(position.getX, position.getY);
+		this.position = new Position(position.getX(), position.getY());
 	}
 }
