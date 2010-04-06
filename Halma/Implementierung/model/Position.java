@@ -1,4 +1,4 @@
-package implementierung.model;
+package model;
  
 public class Position{
 	

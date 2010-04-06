@@ -1,4 +1,4 @@
-package implementierung.model;
+package model;
  
 public class Spieler{
 	
@@ -6,7 +6,7 @@ public class Spieler{
 	private Farbe farbe;
 	
 	public Spieler(Farbe farbe, String name){
-		this.farbe = Farbe.farbe;
+		this.farbe = farbe;
 		this.name = new String(name.toString());
 	}
 	

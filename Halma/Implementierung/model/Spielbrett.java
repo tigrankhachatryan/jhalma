@@ -1,4 +1,4 @@
-package implementierung.model;
+package model;
  
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class Spielbrett{
 	}
 	
 	public Spieler werIstDran(){
-		return new Spieler();
+		return new Spieler(Farbe.Weiss,"Default");
 	}
 	
 	public Boolean ueberpruefeZug(){
