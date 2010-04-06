@@ -36,6 +36,9 @@ public class HalmaFenster{
 		this.buttonNeuesSpiel.addActionListener(new NeuesSpielButtonListener());
 		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener());
 		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener());
+		this.menuItemNeuesSpiel.addActionListener(new MenuListener());
+		this.menuItemEinstellungen.addActionListener(new MenuListener());
+		this.menuItemSpielBeenden.addActionListener(new MenuListener());		
 		// Fenstergröße anpassen und zeigen
 		this.frame.setSize(1000,625);
 		this.frame.setVisible(true);
@@ -124,21 +127,36 @@ public class HalmaFenster{
 		// initialize menuitems with mnemonics
 		this.menuItemNeuesSpiel = new JMenuItem("Neues Spiel");
 		this.menuItemNeuesSpiel.setMnemonic('N');
+		this.menuItemNeuesSpiel.setActionCommand("AC_NEUES_SPIEL");
 		this.menuItemEinstellungen = new JMenuItem("Einstellungen");
+		this.menuItemEinstellungen.setActionCommand("AC_EINSTELLUNGEN");
 		this.menuItemBestenliste = new JMenuItem("Bestenliste");
+		this.menuItemBestenliste.setActionCommand("AC_BESTENLISTE");
 		this.menuItemSpielBeenden = new JMenuItem("Spiel beenden");
+		this.menuItemSpielBeenden.setActionCommand("AC_BEENDEN");
 		this.menuItemSpielregeln = new JMenuItem("Spielregeln");
+		this.menuItemSpielregeln.setActionCommand("AC_SPIELREGELN");
 		this.menuItemInfo = new JMenuItem("Info");
 		this.menuItemSpeichernSlot1 = new JMenuItem("< Slot 1 >");
+		this.menuItemSpeichernSlot1.setActionCommand("AC_SS1");
 		this.menuItemSpeichernSlot2 = new JMenuItem("< Slot 2 >");
+		this.menuItemSpeichernSlot2.setActionCommand("AC_SS2");
 		this.menuItemSpeichernSlot3 = new JMenuItem("< Slot 3 >");
+		this.menuItemSpeichernSlot3.setActionCommand("AC_SS3");
 		this.menuItemSpeichernSlot4 = new JMenuItem("< Slot 4 >");
+		this.menuItemSpeichernSlot4.setActionCommand("AC_SS4");
 		this.menuItemSpeichernSlot5 = new JMenuItem("< Slot 5 >");
+		this.menuItemSpeichernSlot5.setActionCommand("AC_SS5");
 		this.menuItemLadenSlot1 = new JMenuItem("< Slot 1 >");
+		this.menuItemLadenSlot1.setActionCommand("AC_LS1");
 		this.menuItemLadenSlot2 = new JMenuItem("< Slot 2 >");
+		this.menuItemLadenSlot2.setActionCommand("AC_LS2");
 		this.menuItemLadenSlot3 = new JMenuItem("< Slot 3 >");
+		this.menuItemLadenSlot3.setActionCommand("AC_LS3");
 		this.menuItemLadenSlot4 = new JMenuItem("< Slot 4 >");
+		this.menuItemLadenSlot4.setActionCommand("AC_LS4");
 		this.menuItemLadenSlot5 = new JMenuItem("< Slot 5 >");
+		this.menuItemLadenSlot5.setActionCommand("AC_LS5");
 		// add menuitems to menus with separators
 		this.menuSpiel.add(this.menuItemNeuesSpiel);
 		this.menuSpiel.addSeparator();
