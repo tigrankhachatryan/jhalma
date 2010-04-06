@@ -37,8 +37,7 @@ public class HalmaFenster{
 		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener());
 		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener());
 		// Fenstergröße anpassen und zeigen
-		// this.frame.pack(); wird hier nicht benötigt, da wir die Fenstergröße selbst festlegen wollen.
-		this.frame.setSize(1100,800);
+		this.frame.setSize(1000,625);
 		this.frame.setVisible(true);
 	}
 
