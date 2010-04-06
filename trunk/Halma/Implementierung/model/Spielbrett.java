@@ -7,32 +7,33 @@ public class Spielbrett{
 	private Integer anzahlSpieler;
 	private Integer anzahlZuege;
 	
-	private ArrayList<ArrayList<Farbe>> spielbrett;
+	private ArrayList<ArrayList<Spielfeld>> spielbrett;
 	
 	public Spielbrett(){
-		spielbrett = new ArrayList<ArrayList<Farbe>>();
+		spielbrett = new ArrayList<ArrayList<Spielfeld>>();
 		for(int y = 0; y < 17; y++){
-			ArrayList<Farbe> aList = new ArrayList<Farbe>();
+			ArrayList<Spielfeld> aList = new ArrayList<Spielfeld>();
+			// in jeden Index von spielbrett kommt nochmals eine ArrayList hinein, sodass man eine 2dim ArrayList erhält
 			spielbrett.add(y, aList);
 			for(int x = 0; x < 25; x++){
+				// hier wird ein Schachbrettmuster erzeugt
 				if((y%2 == 0 && x%2 == 0) || (y%2 == 1 && x%2 == 1)){
-					spielbrett.get(y).add(x, Farbe.Frei);
+					spielbrett.get(y).add(x, new Spielfeld(false, Farbe.Frei, new Position(new Integer(x), new Integer(y))));
 				}else{
-					spielbrett.get(y).add(x, Farbe.KF);
+					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
 				}
-				// bis hierhin wurde nur ein Schachbrettmuster erzeugt
+				// hier wird das Muster für die untere und obere Ecke des Halmabretts erzeugt
 				if(((x < (12-y) || x > (12+y)) && y < 4) || ((x > (28-y)) || (x < (y-4))) && y > 12){
-					spielbrett.get(y).add(x, Farbe.KF);
-				} 
-				// hier wurde das Muster für die untere und obere Ecke des Halmabretts erzeugt
+					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
+				}
+				// hier wird das Muster für die linke und rechte untere Ecke des Halmabretts erzeugt
 				if((x < (y-4) || x > (28-y)) && (y > 4 && y < 9)){
-					spielbrett.get(y).add(x, Farbe.KF);
+					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
 				}
-				// hier wurde das Muster für die linke und rechte untere Ecke des Halmabretts erzeugt
+				// hier wird das Muster für die linke und rechte obere Ecke des Halmabretts erzeugt
 				if((x < (12-y) || x > (y+12)) && (y > 8 && y < 12)){
-					spielbrett.get(y).add(x, Farbe.KF);
+					spielbrett.get(y).add(x, new Spielfeld(true, Farbe.KF, new Position(new Integer(x), new Integer(y))));
 				}
-				// hier wurde das Muster für die linke und rechte obere Ecke des Halmabretts erzeugt
 			}
 		}
 	}
@@ -57,6 +58,10 @@ public class Spielbrett{
 		return new Integer(this.anzahlZuege.intValue());
 	}
 	
+	public Spielfeld getSpielfeld(Position position){
+		return spielbrett.get(position.getY()).get(position.getX());
+	}
+		
 	public void setAnzahlSpieler(Integer anzahlSpieler){
 		if (anzahlSpieler.intValue() < 2 || anzahlSpieler.intValue() == 5 || anzahlSpieler.intValue() > 6){
 			System.out.println("Die Anzahl der Spieler darf nur 2, 3, 4 oder 6 betragen!");
