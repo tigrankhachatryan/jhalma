@@ -3,12 +3,13 @@ package view;
 import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
  
 public class SpielBeendenFenster{
 	
-	private JFrame frame;
+	private JDialog frame;
 	private JButton buttonJa, buttonNein;
 	private JLabel labelSpielBeenden;
 	private GridBagConstraints c;
@@ -16,10 +17,10 @@ public class SpielBeendenFenster{
 	/*
 	 * Standard-Konstruktor.
 	 */
-	public SpielBeendenFenster(){
+	public SpielBeendenFenster(JFrame owner){
 		// Basiseinstellungen
-		this.frame = new JFrame("Spiel beenden");
-		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.frame = new JDialog(owner,"Spiel beenden",true);
+		this.frame.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen

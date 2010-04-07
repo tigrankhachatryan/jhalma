@@ -2,19 +2,19 @@ package controller;
 
 import view.*;
 import java.awt.event.*;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 
 public class AbbrechenButtonListener implements ActionListener{
 	
-	private JFrame frame;
+	private JDialog dialog;
 	
-	public AbbrechenButtonListener(JFrame frame){
+	public AbbrechenButtonListener(JDialog dialog){
 		
-		this.frame = frame;
+		this.dialog = dialog;
 	}
 	
 	public void actionPerformed(ActionEvent e){
 	
-		this.frame.dispose();
+		this.dialog.dispose();
 	}
 }

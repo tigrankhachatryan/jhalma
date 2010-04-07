@@ -2,15 +2,18 @@ package controller;
 
 import view.*;
 import java.awt.event.*;
+import javax.swing.JFrame;
 
 public class NeuesSpielButtonListener implements ActionListener{
 
-	public NeuesSpielButtonListener(){
+	private JFrame mainFrame;
 	
+	public NeuesSpielButtonListener(JFrame mainFrame){
+		this.mainFrame = mainFrame;
 	}
 	
 	public void actionPerformed(ActionEvent e){
 		
-		new NeuesSpielFenster();
+		new NeuesSpielFenster(this.mainFrame);
 	}
 }

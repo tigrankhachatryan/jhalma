@@ -4,16 +4,17 @@ import model.*;
 import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JComboBox;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 
 public class NeuesSpielFenster implements ActionListener {
 
-	private JFrame frame;
+	private JDialog frame;
 	private JButton buttonOK, buttonAbbrechen;
 	private JLabel labelAnzahlSpieler, labelFarbeSpieler, labelSpieler1, labelSpieler2, labelSpieler3, labelSpieler4, labelSpieler5, labelSpieler6;
 	private JComboBox comboBoxAnzahlSpieler, comboBoxFarbeSpieler1, comboBoxFarbeSpieler2, comboBoxFarbeSpieler3, comboBoxFarbeSpieler4, comboBoxFarbeSpieler5, comboBoxFarbeSpieler6;
@@ -23,12 +24,13 @@ public class NeuesSpielFenster implements ActionListener {
 	/*
 	 * Standard-Konstruktor.
 	 */
-	public NeuesSpielFenster(){
+	public NeuesSpielFenster(JFrame owner){
 		// Basiseinstellungen	
-		this.frame = new JFrame("Neues Spiel");
-		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.frame = new JDialog(owner,"Neues Spiel",true);
+		this.frame.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
+		//this.frame.setAlwaysOnTop(true);
 		// GUI erzeugen
 		this.createGUI();
 		//Listener hinzufügen

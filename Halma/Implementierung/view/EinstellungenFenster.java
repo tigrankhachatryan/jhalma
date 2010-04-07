@@ -4,6 +4,7 @@ import model.*;
 import controller.*;
 import java.awt.*;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -11,7 +12,7 @@ import javax.swing.JComboBox;
  
 public class EinstellungenFenster{
 	
-	private JFrame frame;
+	private JDialog frame;
 	private JButton buttonAbbrechen, buttonOK;
 	private JLabel labelFarbeSpielbrett;
 	private JComboBox comboBoxFarbeSpielbrett;
@@ -21,10 +22,10 @@ public class EinstellungenFenster{
 	/*
 	 * Standard-Konstruktor.
 	 */
-	public EinstellungenFenster(){
+	public EinstellungenFenster(JFrame owner){
 		// Basiseinstellungen
-		this.frame = new JFrame("Einstellungen");
-		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.frame = new JDialog(owner,"Einstellungen",true);
+		this.frame.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		this.frame.getContentPane().setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		this.frame.getContentPane().setLayout(new GridBagLayout());
 		// GUI erzeugen

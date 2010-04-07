@@ -2,19 +2,19 @@ package controller;
 
 import view.*;
 import java.awt.event.*;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 
 public class OKButtonListener implements ActionListener{
 	
-	private JFrame frame;
+	private JDialog dialog;
 	
-	public OKButtonListener(JFrame frame){
+	public OKButtonListener(JDialog dialog){
 		
-		this.frame = frame;
+		this.dialog = dialog;
 	}
 	
 	public void actionPerformed(ActionEvent e){
 	
-		this.frame.dispose();
+		this.dialog.dispose();
 	}
 }

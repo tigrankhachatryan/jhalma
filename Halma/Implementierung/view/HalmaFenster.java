@@ -28,6 +28,7 @@ public class HalmaFenster{
 	private GridBagConstraints c;
 	
 	public HalmaFenster(){
+		this.menuItemList = new ArrayList<JMenuItem>();
 		// Basiseinstellungen
 		this.frame = new JFrame("Halma");
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,12 +37,12 @@ public class HalmaFenster{
 		// GUI erzeugen
 		this.createGUI();
 		// Listener hinzufügen
-		this.buttonNeuesSpiel.addActionListener(new NeuesSpielButtonListener());
-		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener());
-		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener());
+		this.buttonNeuesSpiel.addActionListener(new NeuesSpielButtonListener(this.frame));
+		this.buttonEinstellungen.addActionListener(new EinstellungenButtonListener(this.frame));
+		this.buttonSpielBeenden.addActionListener(new SpielBeendenButtonListener(this.frame));
 		Iterator<JMenuItem> i = this.menuItemList.iterator();
 		while(i.hasNext()){
-			i.next().addActionListener(new MenuListener());
+			i.next().addActionListener(new MenuListener(this.frame));
 		}	
 		// Fenstergröße anpassen und zeigen
 		this.frame.setSize(1000,625);
