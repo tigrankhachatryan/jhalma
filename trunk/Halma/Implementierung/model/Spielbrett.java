@@ -58,8 +58,8 @@ public class Spielbrett{
 		return new Integer(this.anzahlZuege.intValue());
 	}
 	
-	public Spielfeld getSpielfeld(Integer x, Integer y){
-		return new Spielfeld(spielbrett.get(y.intValue()).get(x.intValue()).isBesetzt(), spielbrett.get(y.intValue()).get(x.intValue()).getFarbe());
+	public Spielfeld getSpielfeld(Position p){
+		return new Spielfeld(spielbrett.get(p.getY()).get(p.getX()).isBesetzt(), spielbrett.get(p.getY()).get(p.getX()).getFarbe());
 	}
 		
 	public void setAnzahlSpieler(Integer anzahlSpieler){

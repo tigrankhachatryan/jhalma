@@ -2,15 +2,18 @@ package controller;
 
 import view.*;
 import java.awt.event.*;
+import javax.swing.JFrame;
 
 public class SpielBeendenButtonListener implements ActionListener{
 
-	public SpielBeendenButtonListener(){
+	private JFrame mainFrame;
 	
+	public SpielBeendenButtonListener(JFrame mainFrame){
+		this.mainFrame = mainFrame;
 	}
 	
 	public void actionPerformed(ActionEvent e){
 		
-		new SpielBeendenFenster();
+		new SpielBeendenFenster(this.mainFrame);
 	}
 }
