@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-
+@SuppressWarnings("all")
 public class FrameFader implements ActionListener{
 	private JFrame frame;
 	private Timer timer;
