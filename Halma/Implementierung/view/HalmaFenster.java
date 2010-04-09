@@ -208,10 +208,9 @@ public class HalmaFenster{
 	 * Hilfsmethode
 	 */
 	private void panelFuellen(){
-		Position pos1 = new Position(new Integer(0), new Integer(0));
-		panelLeer.add(new JHalmaFeld(pos1));
-		Position pos2 = new Position(new Integer(1), new Integer(1));
-		panelLeer.add(new JHalmaFeld(Farbe.Rot, pos2));
+		for(int i = 0; i < 425; ++i)
+			//panelLeer.add(new JHalmaFeld(Farbe.Blau, new Position((int)i/25,i%25)));
+			panelLeer.add(new JButton());
 	}
 	
 	/*
