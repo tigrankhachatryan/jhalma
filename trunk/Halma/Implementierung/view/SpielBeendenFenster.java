@@ -11,10 +11,14 @@ public class SpielBeendenFenster{
 	 */
 	public SpielBeendenFenster(JFrame owner){
 		
-		Object[] options = {"Ja", "Nein"};
-		int n = JOptionPane.showOptionDialog(owner,"Willst du das Spiel wirklich beenden ?", "Spiel Beenden",
-										JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
-		if(n==0)
-			System.exit(0);		
+		JOptionPane.setDefaultLocale(Locale.GERMAN);
+		
+		int n = JOptionPane.showOptionDialog(owner,"Willst du das Spiel wirklich beenden ?", "Spiel Beenden", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+		
+		if(n == JOptionPane.YES_OPTION){
+			// User hat Ja geklickt
+			System.exit(0);	
+		}
+		// Wenn der User Nein anklickt schlieﬂt sich das Fenster per Default.
 	}
 }
