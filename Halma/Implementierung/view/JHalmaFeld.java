@@ -100,6 +100,8 @@ public class JHalmaFeld extends JComponent {
 		case KF:
 			this.farbe = new Color(0,0,0,0);
 			this.NAF = true;
+			this.setVisible(false);
+			break; 
 		}
 		this.position = new Position(p.getX(),p.getY());
 		this.renderingHints = new HashMap<RenderingHints.Key,Object>();

@@ -98,7 +98,8 @@ public class HalmaFenster{
 		this.createMenuBar();
 		this.frame.setJMenuBar(this.menuBar);
 		// panelLeer
-		this.panelLeer = new JPanel();
+		this.panelLeer = new JPanel(new GridLayout(17, 25));
+		this.panelFuellen();
 		this.setConstraints(new Integer(0), new Integer(1), new Double(0.5), new Double(0.0), new Integer(4), new Integer(5), new Integer(GridBagConstraints.PAGE_START),
 							new Integer(GridBagConstraints.HORIZONTAL), new Integer(0), new Integer(0), new Integer(0), new Integer(0));
 		this.frame.getContentPane().add(this.panelLeer, this.c);
@@ -201,6 +202,16 @@ public class HalmaFenster{
 		this.menuItemList.add(this.menuItemLadenSlot3);
 		this.menuItemList.add(this.menuItemLadenSlot4);
 		this.menuItemList.add(this.menuItemLadenSlot5);
+	}
+	
+	/*
+	 * Hilfsmethode
+	 */
+	private void panelFuellen(){
+		Position pos1 = new Position(new Integer(0), new Integer(0));
+		panelLeer.add(new JHalmaFeld(pos1));
+		Position pos2 = new Position(new Integer(1), new Integer(1));
+		panelLeer.add(new JHalmaFeld(Farbe.Rot, pos2));
 	}
 	
 	/*
